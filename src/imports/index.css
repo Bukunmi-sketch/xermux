@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+
+:root{
+    --color-dark: #241e38;;
+    --color-light:#f0eef6;
+    --color-gray:#9e98b3;
+    --color-primary:rgb(12, 5, 5);
+    --color-secondary:#d6ccff;
+    --color-danger:#fb5151;
+    --color-black:#000;
+    --color-success:#51fb51;
+    --color-white:#ffffff;
+    --color-lightblack:#101010 ;
+    --border-radius:4px;
+    --card-border-radius:5px;
+    --btn-padding:10px 25px;
+    --search-padding:0.6rem 1rem;
+    --card-padding:1rem;
+
+    --sticky-top-left:5.4rem;
+    --sticky-top-right:-18rem;
+
+    --border-color:#fff;
+
+    --font-lato: "lato", sans-serif;
+    --font-poppins: "poppins", sans-serif;
+    --font-ubuntu: 'ubuntu',sans-serif
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+body{
+    font-family: "DM sans", sans-serif;
+   color: var(--color-white);
+   background-color: var(--color-black);
+   overflow-x: hidden;
+   text-decoration: none;
+}
+/* Loaders */
+#loader{
+    position:absolute;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    animation:animate 4s linear infinite;
+    }
+    
+.span{
+    animation:anime 2s linear infinite;
+    border:2px solid transparent;
+    border-top:2px solid grey;
+    border-radius:50%;
+    position:absolute;
+    }
+.span:nth-child(1){
+    width:20px;
+    height:20px;
+    animation-duration:0.5s;
+    }
+    /*+2*/
+.span:nth-child(2){
+    width:30px;
+    height:30px;
+    animation-duration:0.7s;
+    top:-5px;
+    }
+    /*+3*/
+.span:nth-child(3){
+    width:40px;
+    height:40px;
+    animation-duration:1s;
+    top:-10px;
+    }
+    /*+4*/
+.span:nth-child(4){
+    width:50px;
+    height:50px;
+    animation-duration:1.4s;
+    top:-15px;
+    }
+    /*+5*/
+.span:nth-child(5){
+    width:60px;
+    height:60px;
+    animation-duration:1.75s;
+    top:-20px;
+    }
+.span:nth-child(6){
+    width:70px;
+    height:70px;
+    animation-duration:2.35s;
+    top:-25px;
+    }
+.span:nth-child(7){
+    width:80px;
+    height:80px;
+    animation-duration:3.55s;
+    top:-30px;
+    }
+ @keyframes anime{
+    85%{transform:rotate(360deg);}
+    }
+@keyframes animate{
+    85%{filter:hue-rotate(360deg);}
+    }
+    
+    
+   
+    
+    #loader p{
+    color: black;
+    font-family: "Handlee",cursive;
+    text-align: center;
+    margin: 10px 0 0 -2px;
+    }
+
+/* ------NAVBAR --------*/
+
+nav{
+    width: 100%;
+    background-color: var(--color-lightblack);
+    padding:0.3rem 0 ;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    border: 1px solid var(--color-lightblack);
+    
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bar{
+    padding:5px;
+    border: 1px solid transparent;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    display: none;
+}
+
+
+.btn{
+    display: inline-block;
+   
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+
+nav .create{
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+}
+.create-post{
+    background:black;
+    border:1px solid transparent;
+    border-radius:4px;
+    color:white;
+    padding:5px 20px;
+    font-weight:bold;
+    margin:5px;
+}
+ 
+    
+    .section {
+      padding:10px;
+    
+    }
+
+
+    .logo{
+        margin:10px auto;
+        font-size:1.5em;
+        font-weight:bold;
+    }
+
+    .logo-logo{
+        text-align:center;
+         font-size:1.5em;
+        margin-top:30px;
+    }
+
+    h2{
+        position:relative;
+        margin-top:150px;
+        text-align:center;
+    }
+     
+    .content{
+      /*   display: none;
+       background-repeat: no-repeat;
+        background-position: 0px;
+        background-size:100% 100%;
+        */
+    }
+       
+       .get-started{
+       font-weight:light;
+       text-align:center;
+       font-size:0.9em;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin:50px 0 0 0;
+       text-align:justify-content;           
+       color:white;
+       letter-spacing: 0.1px;
+       }
+       
+       
+     
+       
+       .bottom{
+       width:100%;
+       padding:10px;
+       border: 1px solid transparent;
+       display:flex;
+       align-items: center;
+       justify-content: center;
+       margin:30px auto;
+       max-width:900px;
+       }
+       .bottom a{
+       color:black;
+       font-size:10px;
+     
+       text-decoration:none;
+       }
+       
+       .signup{
+       background-color: #101010 ;
+       color:white;
+       border-radius:4px;
+       width:220px;
+       padding:10px;
+       border:1px solid transparent;
+       font-size:1.6em;
+       font-weight:bold;
+       position:relative;
+       }
+       
+       .login{
+       background-color:#cfb107;
+       color:black;
+       width:220px;
+       padding:10px;
+       margin:0 0 0 10px;
+       border-radius:4px;
+       border:1px solid #cfb107;
+       font-size:1.6em;
+       font-weight:bold;
+       word-spacing: 0.2em;
+       position: relative;
+       }
+       .what{
+       width: 100%;
+       height: 300px;
+       margin:80px 0 0 0;
+       }
+        
+    
+      
+      li{
+      list-style-type:round;
+      color: grey;
+      font-weight:light;
+      text-align:center;
+      font-size:0.8em;
+      text-align:justify-content;
+      
+      letter-spacing: 0.1em
+      }
+
+      footer{
+        font-size:0.8em;
+        font-weight:bold;
+        word-spacing: 0.4em;
+        position: relative;
+        text-align:center;  
+        padding:30px 0;  
+        height:30px;  
+          border-top:1px solid #cecece;
+      }
+
+      .contact{
+      background-color:var(--color-black);
+      color:white;
+      padding:5px 30px;
+      margin:0 0 0 10px;
+      border-radius:4px;
+      border:1px solid var(--color-light);
+      font-size:1em;
+      font-weight:bold;
+      word-spacing: 0.2em;
+      position: relative;  
+     }
+    
+@media screen and (max-width:500px) {
+    nav{
+        padding: 0.2rem;
+    }
+
+    .bar{
+        display: block;
+    }
+
+     h2{
+        margin-top:100px;
+     }
+
+    .bottom{
+        flex-direction: column;
+    }
+
+    .login{
+        margin: 10px 0 0 0;
+    }
+
+    .get-started{
+       margin:40px 0 0 0;
+    }
+
+}

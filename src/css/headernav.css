@@ -1,0 +1,134 @@
+/* ------------------NAVLEFT--------------------------*/
+ .navleft{
+  /*  height:max-content;
+    position: sticky; 
+    */
+    z-index:100;
+    width: 100%;
+    display:flex;
+    transition: 0.3s;
+    animation-name: animatesidebar;
+    animation-duration: 0.7s;
+   
+}
+
+/* Add Animation */
+@keyframes animatesidebar{
+    from {width:-70%; opacity: 0}
+    to {width:0%; opacity: 1}
+     
+}
+
+
+/* ------------------NAVSIDEBAR--------------------------*/
+.navleft .navsidebar{
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.navleft .navsidebar .menu-item{
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+    translate: all 300ms ease;
+    position: relative;
+    border: 1px solid transparent;
+}
+
+.navleft .navsidebar .menu-item:hover{
+    background-color: var(--color-danger);  
+    color: white;
+   
+}
+
+.navleft .navsidebar .icons{
+    font-size: 1.5rem;
+    color: var(--color-black);
+    margin-left: 2rem;
+    position:relative;
+}
+
+.navleft .navsidebar h3{
+    margin-left: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--color-black);
+    font-weight: bold;
+}
+
+/* -------------------------NAVRIGHT-------------------*/
+
+.navright{
+   bottom: 0;  
+   height: max-content;
+   top: var(--sticky-top-right);
+   z-index:100;
+   border: 1px solid transparent;
+   position:sticky;
+   top:0px;
+   background-color: white;
+   box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.09);
+   animation-name: animatecartitems;
+   animation-duration: 0.7s;
+   transition: 0.3s;
+   border: 1px solid lightgrey;
+ 
+}
+
+/* Add Animation */
+@keyframes animatecartitems {
+   from {width:0%; opacity: 0}
+   to {width:100%; opacity: 1}
+    
+  }
+
+
+
+
+@media screen and (max-width:500px) {
+     
+  
+    .bars{
+        display: block;       
+    }
+
+    .navleft{
+      /*  grid-column:1/4 ; */
+        left: 0;
+        width:0;
+        top:0;
+        background-color: white;
+        display:block;
+    }
+
+    .navright{
+       /*  grid-column:1/4 ; */
+        right: 0;
+        width:0;
+        top:0;
+        background-color: white;
+        display: block;
+        transition: 1s;
+        
+    }
+
+    .navleft .navsidebar{
+        margin-top:0;
+        border-radius: 0;
+       
+    }
+    .navsidebar h3{
+        display: block;
+       
+    }
+    .navleft .btn{
+        display: block;
+    }
+
+   
+
+}

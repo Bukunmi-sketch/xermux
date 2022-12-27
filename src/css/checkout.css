@@ -1,0 +1,388 @@
+/* larger screens  */
+.times{
+  display: flex;
+  border: 1px solid transparent;
+  align-items: center;
+  justify-content:space-around;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.items{
+   margin:auto;
+   font-weight: bold;
+   background-color: white;
+   border: 1px solid transparent;
+   max-width:100%;
+   width: 100%;
+   padding:10px;
+   font-family: "Montserrat", sans-serif;
+   display: flex;
+   justify-content: space-around;
+  
+}
+
+.checkout-first-box{
+   width:25%;
+   border:1px solid #cecece;
+   margin:5px;
+   height:250px;
+  
+}
+
+.checkout-first-box ul li{
+   list-style-type: none;
+}
+
+.checkout-first-box ul li p{
+   font-family: "DM sans",sans-serif;
+}
+
+.subtotal-container{
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   width:70%;
+   border: 1px solid transparent;
+   font-weight: 900;
+}
+
+.total-container{
+  background-color: white;
+  padding: 5px 5px 5px 5px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  border: 1px solid transparent;
+}
+
+.item-row{
+  border-top: 1px solid #cecece; 
+  border-bottom: 1px solid #cecece; 
+  margin: 2px;
+  display: flex;
+  padding:2px;
+  justify-content: space-between;
+  border: 1px solid transparent;
+  height: 130px;
+}
+
+.item-row img{
+   width:100px;
+   height:100px;
+   border: 1px solid transparent;
+}
+
+.row-col{
+   display: flex;
+   border: 1px solid transparent;
+   flex-direction: column;
+   width:100%;
+   
+}
+
+.itemname{
+  font-family: "Montserrat",sans-serif;  
+}
+
+.flex-col{
+   display:flex;
+   margin-top:5px;
+   justify-content: space-around;
+   align-items: center;
+   border: 1px solid transparent;
+}
+
+.flex-col .quantity{
+  font-family: "Montserrat", sans-serif;
+}
+
+.action-button{
+   display: flex;
+   border: 1px solid transparent;
+   width:80%;
+   justify-content: space-around;
+   align-items: center;
+   margin:2px auto;
+   padding: 5px;
+}
+
+.add{
+  padding:1px 5px;
+   background-color:white ;
+   border-radius:50%;
+   border: 1px solid orangered;
+   color: orangered;
+   font-weight: bold;
+   font-size:0.9em;
+}
+
+.remove{
+  padding:1px 5px;
+  background-color:white;
+  border-radius:50%;
+  border: 1px solid green;
+  color:green;
+  font-size:0.9em;
+  font-weight: bold;
+}
+
+.delete{
+  padding:2px 15px;
+  background-color:green;
+  border-radius:5px;
+  border: 1px solid orangered;
+  color: white;
+  font-weight: bold;
+}
+
+.cart-details{
+  display: flex;
+  flex-direction: column;
+  margin:5px;
+}
+
+.cartdetails-row{
+  display: flex;
+  border: 1px solid transparent;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  padding: 3px;
+}
+
+.itemsprice{
+  font-family: "Montserrat", sans-serif;
+}
+
+.itemcontent{
+  font-family: "Montserrat", sans-serif;
+}
+
+.checkout-btn{
+  padding:8px 20px;
+  background-color:green;
+  border-radius:2px;
+  border: 1px solid transparent;
+  color: white;
+  font-weight: bold;
+  width:100%;
+  font-size:0.8em;
+  margin:5px 0 0 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.quantity{
+  font-weight: bold;
+}
+
+
+/* checkout forms              */
+
+.form{
+  background-color: white;
+  padding: 5px 20px 10px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+  margin: 10px;
+}
+
+.contact-info{
+  font-family: "Montserrat", sans-serif;
+  font-weight:900;
+  margin: 0 10px;
+}
+
+.namebox{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+  padding: 0px 10px 0px 10px;
+}
+
+.flexnameboxa{
+  display: flex;
+  width:100%;
+  border: 1px solid transparent;
+  margin-top: 10px;
+}
+
+.flexnameboxb{
+  display: flex;
+  flex-basis: 0 50%;
+  width:100%;
+  border: 1px solid transparent;
+}
+
+.flexnameboxb .namebox{
+  border: 1px solid transparent;
+  width: 50%;
+}
+
+.flexnameboxb .namebox:last-child{
+  border: 1px solid transparent;
+  width: 50%;
+}
+
+.namebox label{
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9em;
+}
+
+.namebox input[type=text],.namebox input[type=email],.namebox input[type=number], select{
+  width:100%;
+  box-sizing:border-box;
+  outline:none;
+  font-family: "Montserrat", sans-serif;
+  font-weight:600;
+  margin-bottom:10px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: white;
+  font-size: 0.8em;
+}
+
+/*
+.namebox input[type=text]:hover,.namebox input[type=email]:hover,.namebox input[type=number]:hover, select:hover{
+  border: 2px solid black;
+}
+
+*/
+.namebox textarea{
+  border-radius: 4px;
+  height: 130px;
+  padding: 10px;
+  text-align: left;
+  font-size: 0.8em;
+}
+
+
+
+
+.empty-cart-widescreen{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   margin: 0 auto;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+  margin: 10px;
+}
+
+
+
+
+@media screen and (max-width:992px) {
+
+  .checkout-first-box{
+      display: none;
+  }
+
+  .subtotal-container{
+    width: 100%;
+  }  
+
+
+
+
+
+
+}    
+
+@media screen and (max-width:700px) {
+    
+    .subtotal-container{   
+        flex-direction: column;
+       }
+
+       .total-container{
+          width: 100%;
+       }
+
+       .itemsprice{
+        font-size:0.9em;
+      }
+      
+      .itemcontent{
+        font-size:0.9em;
+      }
+
+     .namebox label{
+        font-size:0.9em;     
+      }
+      
+}
+
+
+
+/*  for smaller screens   */
+
+@media screen and (max-width:500px) {
+   .items{
+      display: flex;
+      flex-direction: column;
+   }
+
+   .checkout-first-box{
+      display: none;
+   }
+   
+   .empty-cart-widescreen{
+      display: none;
+   }
+
+   .flex-col .quantity{
+    font-size:0.8em;
+  }
+
+   .itemsprice{
+    font-size:0.8em;
+  }
+  
+  .itemcontent{
+    font-size:0.8em;
+  }
+
+   .item-row{
+     margin-top:-5px;
+   }
+
+   .namebox label{
+    font-size:0.8em;
+   
+  }
+
+  .add{
+    font-size: 0.8em;
+  }
+
+  .remove{
+    font-size: 0.8em;
+  }
+
+  .itemname{
+    font-size: 0.8em;
+  }
+  
+
+  .form{
+    max-width:480px;
+    width: 100%;
+    background-color: white;
+    padding:0;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
+
+}

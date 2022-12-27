@@ -1,0 +1,741 @@
+:root{
+    --color-primary:rgb(17, 82, 17);
+    --color-white:white;
+    --color-danger:orangered;
+    --color-black:#000000;
+    --sticky-top-left:5.4rem;
+    --sticky-top-right:-18rem;
+    --color-green:#20B302;
+    --color-orange:#FF6600;
+}
+
+/* ---------------------------MEDIA QUERY FOR SMALL LAPTOPS AND BIG TABLETS-----------------*/
+
+@media screen and (max-width:1200px) {
+    header .otherside{ 
+        width: 50%;
+      }
+       
+      
+       
+    header ul li .menu-item{
+        font-size:1em;
+      
+       }
+}
+
+/* ---------------------------MEDIA QUERY FOR SMALL TABLETS AND MOBILE PHONES-----------------*/
+
+@media screen and (max-width:992px) {
+
+    .bars{
+        display: block;
+    }
+
+    header .otherside ul{
+        display:flex;
+        flex-direction:column;
+        width:70%;
+        position:absolute;
+        top:0;
+        height:100vh;
+        background-color: var(--color-white);
+        left:-70%;
+        border: 1px solid transparent;
+        z-index:200px;
+        }
+
+    header .otherside ul li{
+        padding:20px;
+        border:1px solid transparent;
+            }   
+    
+    .logo{
+        font-size: 25px;  
+        letter-spacing:0;      
+        margin-left:20px;
+               }
+    
+    .closebar{
+        display: block;
+        color:var(--color-orange);
+    } 
+
+    .bar-box{
+        right:70px;
+        position: absolute; 
+    }          
+
+    .cartlist{
+        right:10px;
+        position: absolute; 
+    }     
+    
+    
+    .Natural{
+        font-size:2em; 
+    }
+
+    
+/* -------------------------OUR CLIENT-------------------*/
+
+.our-client{
+    background-color: var(--color-orange);
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-boxa{
+   border: 1px solid transparent;
+/*    position: absolute;
+  margin: -115px 0 0 0;
+   width: 30%;
+   */
+   width:50%;
+   height:300px;
+   margin:-50px 0 0 -50px;
+}
+
+ 
+.suit-images{
+   height:300px;
+    aspect-ratio: 1/1;
+    overflow: visible;
+    margin:0px 0 0 -30px;
+    
+}
+
+
+.client-boxb{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+    height: 100%;
+    width:100%;
+}
+
+.client-boxb h3{
+ 
+    font-size:1.1em;
+}
+
+.client-boxb p{
+    color: black;
+    font-weight: 700;
+    margin:auto;
+    font-size: 2em;
+}
+
+.delivered-con{
+    display: flex;
+    border:1px solid transparent;
+    justify-content:space-around;
+    height: 100%;
+}
+
+.delivered{
+   display: block;
+   text-align: center;
+   margin:200px 0 0 -20%;
+   position: absolute;
+   color: black;
+   text-align: center;
+}
+
+.delivered .italic-order{
+    color: black;
+    margin:-5px 0 0 0;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+
+.img-con{
+    display: flex;
+    flex-direction: column;    
+    border: 1px solid transparent;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+}
+
+.img-con img{
+    border-bottom:40px solid white;
+    border-radius: 20px;
+    height:120px;
+    width:50%;
+    border-radius:20px;
+}
+
+.img-con span{
+    width:100%;
+    padding: 10px;
+    margin:-40px auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: grey;
+}
+
+
+/* -------------------------MISSION-------------------*/
+.mission{
+    padding:50px 0 50px;
+    display: flex;
+    border: 1px solid transparent;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top:70px;
+}
+
+
+.mission .mission-box{
+    height:350px;
+    width:70%;
+    background-color: var(--color-orange);
+    display: flex;
+    margin:40px;
+  /*  padding:20px 0 50px;  */
+    border-radius: 25px;
+}
+
+       /*  image container  */
+       .mission-img{
+        border:1px solid transparent;
+        margin-top: 30px ;
+    }
+    
+    .mission-img-a{
+       display: flex;
+       justify-content:space-between;
+       align-items: center;
+    }
+    
+    .mission-img-a img:first-child{
+        height: 100px;
+        width: 150px;
+        border-radius:10px;
+        margin:0 0 0 -30px;
+    }
+    
+    .mission-img-a img{
+        height: 100px;
+        width: 150px;
+        margin: 10px;
+        border-radius: 10px;
+    }
+    
+    
+      /*  down image  */
+    .mission-img-b{
+        border: 1px solid transparent;
+    }
+    
+    .mission-img-b img{
+        height:200px;
+        width:250px;
+        margin: 10px;
+        border-radius: 25px;
+        
+    }
+
+    /* -------------------------MISSSION VISION-------------------*/
+.mission-vision{
+    border: 1px solid transparent;
+    margin:30px 0 0 0;
+}
+
+.mission-vision h3{
+   font-size: 1em;
+}
+
+.vision-text{
+    margin:20px ;
+    width: 60%;
+    border: 1px solid transparent;
+}
+
+.mission-vision i{
+    line-height:10px;
+    font-size:0.9em;
+}
+
+    
+
+   
+.showw{
+        background-color: var(--color-white);
+        padding:5px 30px;
+        border-radius:30px;
+        display:flex;
+        margin:10px 0 0 25%;
+        align-items:center;
+        justify-content:center;
+         width:50%;
+        position:relative;
+        border:1px solid transparent;
+        font-size:0.8em;
+        font-weight:bold;
+        font-family:"mukta", sans-serif;
+        color:black;
+}
+
+.greeny-order-img img{
+    height:290px;
+    width:290px;
+    margin: 10px;
+    border-radius: 10px;
+}    
+
+}
+
+@media screen and (max-width:740px) {
+
+.boxa-content p{
+        font-weight:400;
+        text-align: center;
+        font-size:0.9em;
+}
+   
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.first-box{
+ width:100%;
+ margin:5px;
+ height:250px;
+}
+
+.second-box, .third-box{
+    width:100%;
+    margin:5px;
+    height:150px;
+   }
+
+li .buy-now{
+ margin:0 0 0 -10px;
+ background-color: var(--color-green);
+ border:1px solid transparent;
+ padding: 5px 30px;
+ color: white;
+ font-weight: bold;
+ border-radius:4px;
+ display: flex;
+ cursor: pointer;
+
+}
+
+}
+
+@media screen and (max-width:640px) {
+
+.img-con img{
+    width:100%;
+    }    
+    
+
+.mission h3{
+    font-size:1em;
+    font-weight:700;
+}
+
+.mission p{
+    font-style: italic;
+    font-weight: 500;
+}
+
+.mission .mission-box{
+    height:300px;
+    width:100%;
+    background-color: var(--color-orange);
+    display: flex;
+    margin:40px;
+  /*  padding:20px 0 50px;  */
+    border-radius: 25px;
+   
+}
+
+       /*  image container  */
+.mission-img{
+    border:1px solid transparent;
+    margin: -30px auto;
+    height: 400px;
+   
+}
+
+.mission-img-a{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+}
+
+.mission-img-a img:first-child{
+    height: 120px;
+    width: 200px;
+    border-radius:10px;
+    margin:10px 0 0 0;
+   
+}
+
+.mission-img-a img{
+    height: 120px;
+    width: 200px;
+    margin:130px 0 0 0;
+    border-radius: 10px;
+}
+
+
+  /*  down image  */
+.mission-img-b{
+  display: none;
+}
+
+.mission-img-b img{
+    height:250px;
+    width:350px;
+    margin: 10px;
+    border-radius: 25px;
+   
+}    
+
+
+/* -------------------------MISSSION VISION-------------------*/
+.mission-vision{
+    margin:120px 0 0 0;
+    position: absolute;
+    width:95%;
+    border: 1px solid transparent;
+}
+
+.mission-vision h3{
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    
+}
+
+.vision-text{
+    margin:5px auto;
+    width: 60%;
+    border: 1px solid transparent;
+    font-size: 1.2em;
+   
+}
+
+.mission-vision i{
+ 
+    font-weight: light;
+    line-height:0;
+    font-size:0.7em;
+    font-family: "DM sans",sans-serif;
+   
+}
+
+
+
+    /* -------------------------GREENY-ORDER-------------------*/
+
+    .greeny-order{
+        padding: 20px 0 0 0;
+       
+    }
+    
+    .greeny-order h3{
+        font-size: 1.2em;
+        
+    }
+    
+    .greeny-order-img{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid transparent;
+        width:100%;
+        padding: 20px;
+        margin-top:5px;
+    }
+    
+    .greeny-order-img img{
+    
+        height:200px;
+        width:100%;
+        margin: 10px;
+        border-radius: 10px;
+       
+    }     
+    
+    .greeny-order-img img:last-child{
+        display: none;
+    }
+
+    .footer{
+        font-size: 0.8em;
+    }
+
+    .third-box ul li h3{
+        font-size:1em;
+    }
+
+}    
+
+@media screen and (max-width:620px) {
+     
+    
+    header .container .cartlist{
+        border: 1px solid transparent;
+        width:30%;
+        padding: 10px;
+        justify-content: space-between;
+    } 
+
+    /*------------------FIRST SECTION--------------------------*/
+
+    .sectiona{
+      flex-direction: column-reverse;
+      padding:0px 0;
+      height:600px;
+      
+    } 
+
+    .sectiona .boxb{
+        border:1px solid var(--color-green);
+        width: 100%;
+        background-color: var(--color-green);
+        border-radius: 0;
+        height:40%;
+    }
+
+    .sectiona .boxa{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        padding:5px;
+        height: 100%;
+        margin-top:80px;
+    }
+
+    /* -----------------straight image--------------------------*/
+    .boxb .imga{
+        margin:80px auto;
+        height:250px;
+        width: 250px;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+       
+    }
+
+    /* -----------------slant image--------------------------*/
+    .boxb .imgb{
+        height: 350px;
+        width: 350px;
+        border: 1px solid transparent;
+        position: absolute;
+        margin:-300px 0 0 -50px;
+        display: none;
+    }
+     
+    /* -----------------first now second in reverse flex box--------------------------*/
+    .boxa-content{
+        border: 1px solid transparent;
+        height: 100%;
+    }
+
+    .Natural{
+        font-weight: 700;
+        font-size:1.1em;
+        text-align: center;
+        margin-top: 10px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        font-weight:900;
+    }
+
+    .boxa-content p{
+        font-weight:400;
+        text-align: center;
+        font-size:0.9em;
+    }
+
+    /* -----------------first now second in reverse flex box--------------------------*/
+    .buy-now{
+       margin: 0 auto;
+    }
+
+    .bars{
+        display: block;       
+    }
+
+    .trash{
+        display: none;
+    }
+
+   
+    main{
+        position:relative ;
+        top:6.5em;
+    }
+    
+    .sectiona{
+        top: 20px;
+    }
+
+
+/* -------------------------OUR CLIENT-------------------*/
+
+.our-client{
+    background-color: var(--color-orange);
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-boxa{
+   border: 1px solid transparent;
+/*    position: absolute;
+  margin: -115px 0 0 0;
+   width: 30%;
+   */
+   width:50%;
+   height:300px;
+   margin:-50px 0 0 -50px;
+}
+
+ 
+.suit-images{
+   height:300px;
+    aspect-ratio: 1/1;
+    overflow: visible;
+    margin:0px 0 0 -30px;
+    
+}
+
+
+.client-boxb{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+    height: 100%;
+    width:100%;
+}
+
+.client-boxb h3{
+ 
+    font-size:1.1em;
+}
+
+.client-boxb p{
+    color: black;
+    font-weight: 700;
+    margin:auto;
+    font-size: 2em;
+}
+
+.delivered-con{
+    display: flex;
+    border:1px solid transparent;
+    justify-content:space-around;
+    height: 100%;
+}
+
+.delivered{
+   display: block;
+   text-align: center;
+   margin:200px 0 0 -20%;
+   position: absolute;
+   color: black;
+   text-align: center;
+}
+
+.delivered .italic-order{
+    color: black;
+    margin:-5px 0 0 0;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+
+.img-con{
+    display: flex;
+    flex-direction: column;    
+    border: 1px solid transparent;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+}
+
+.img-con img{
+    border-bottom:40px solid white;
+    border-radius: 20px;
+    height:120px;
+    width:100%;
+    border-radius:20px;
+}
+
+.img-con span{
+    width:100%;
+    padding: 10px;
+    margin:-40px auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: grey;
+}
+
+/*
+.chatimage{
+    height:150px;
+    width:350px;
+    border-radius:20px;
+}
+*/    
+ /* -------------------------MISSION-------------------*/
+ .mission{
+    margin:70px 0 0 0;
+    padding:50px 0 50px;
+    display: flex;
+    border: 1px solid transparent;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mission p{
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.vision-text{
+    font-size: 1em;
+}
+
+
+/* -------------------------RIGHT-------------------*/
+
+main .container .right{
+    position:sticky;
+   bottom: 0;  
+   height: max-content;
+   top: var(--sticky-top-right);
+}
+
+
+.showw{
+    background-color: var(--color-light);
+}
+
+}

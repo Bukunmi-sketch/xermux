@@ -1,0 +1,262 @@
+root{
+    --color-primary:rgb(17, 82, 17);
+    --color-white:white;
+    --color-danger:orangered;
+    --color-black:#000000;
+    --sticky-top-left:5.4rem;
+    --sticky-top-right:-18rem;
+    --color-green:#20B302;
+    --color-orange:#FF6600;
+    --color-rred:#7c0606;
+}
+
+p{
+    font-family: "DM sans",sans-serif;
+}
+
+.payment-container{
+    border: 1px solid transparent;
+    margin-top:60px;
+}
+
+.payment-content{
+  border: 1px solid transparent;
+  max-width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-content p,.payment-content span{
+    font-size: 0.8em;
+    font-family: "DM sans",sans-serif;
+}
+
+
+.placed-order{
+    color: #FF6600;
+    font-weight:700;
+    margin: 0 auto;
+    font-size: 1em;
+}
+
+.highlighted{
+    color: black;
+    font-weight:700;
+    font-size: 2em;
+}
+
+.order-hint{
+    color: var(--color-green);
+    font-weight: 600;
+    margin: 0 auto;
+    font-size: 1.1em;
+    font-family: "DM sans",sans-serif;
+}
+
+.order-buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:1px auto;
+    padding:5px;
+   
+}
+
+.vellabtn{
+    background-color: rgb(73, 2, 73);
+    color: white;
+    font-weight: bold;
+    border-radius:none;
+    border: 1px solid goldenrod;
+    padding: 10px 48px 10px 48px; 
+    width: 100%;
+     font-family: "DM sans",sans-serif;
+}
+
+.flutterwave-btn{
+    background-color: goldenrod;
+    color: white;
+    font-weight: bold;
+    border-radius:none;
+    border: 1px solid goldenrod;
+    padding: 13px 70px 13px 70px; 
+    width: 100%;
+     font-family: "DM sans",sans-serif;
+}
+
+.cashdelivery-btn{
+    background-color: var(--color-green);
+    color: white;
+    font-weight: bold;
+    border-radius:none;
+    border: 1px solid var(--color-green);
+    padding: 10px 65px 10px 65px; 
+    width: 100%;
+     font-family: "DM sans",sans-serif;
+}
+
+
+.view-orders-btn{
+    padding:10px 20px;
+    border: 1px solid var(--color-orange);
+    background-color: var(--color-orange);
+    color: white;
+    border-radius:3px;
+    font-weight: bold;
+    margin: 10px;
+    font-family: "DM sans",sans-serif;
+}
+
+.download-receipt-btn{
+    padding:10px 20px;
+    border: 1px solid var(--color-green);
+    background-color: var(--color-green);
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 0.9em;
+    font-family: "DM sans",sans-serif;
+}
+
+.delete-order-btn{
+    padding:10px 20px;
+    border: 1px solid var(--color-green);
+    background-color: var(--color-green);
+    color: white;
+    border-radius:3px;
+    font-weight: bold;
+    font-family: "DM sans",sans-serif;
+}
+
+.details-displayed{
+    display:block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ 
+
+}
+
+.seat{
+    font-size: 0.8em;
+    color: #20B302;
+}
+
+/* The Close Button */
+.close {
+    color:white;
+    float: right;
+    font-size:5em;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: var(--color-green);
+    color: white;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .modal-header h2{
+    font-size:0.8em;
+    font-family: "DM sans",sans-serif;
+    margin: 0 auto;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+
+.modal-content-p{
+    padding:5px;
+}
+
+.details-content{
+    position: relative;
+    background-color: #fefefe;
+    margin:100px auto;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 5px;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top:30px; opacity: 1}
+  }
+
+
+@media screen and (max-width:850px) {
+      
+    .payment-content{
+        border: 1px solid transparent;
+        max-width: 100%;
+    }
+    
+    .order-hint{
+        color: var(--color-green);
+        font-size:0.9em;
+        margin:15px;
+    }
+
+    .placed-order{
+        font-size: 0.8em;
+        margin:10px;
+    }
+
+
+}
+
+@media screen and (max-width:500px) {
+      
+    .payment-content{
+        border: 1px solid transparent;
+        max-width: 100%;
+    }
+    
+    .placed-order{
+        font-size: 0.8em;
+        margin:10px;
+        font-weight:400;
+    }
+
+    .details-content{
+      width: 95%;
+    }     
+
+    .view-orders-btn{
+        padding:10px 20px;
+        font-size: 0.7em;
+    }
+    
+    .download-receipt-btn{
+        padding:10px 10px;
+        font-size: 0.7em;
+    }
+    
+    .delete-order-btn{
+        padding:10px 10px;
+        font-size: 0.7em;
+    }
+    
+
+}
