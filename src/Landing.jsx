@@ -44,6 +44,13 @@ function LandingPage() {
 
     return (
         <BrowserRouter>
+         <Routes>
+                            <Route path='/signup' element={<Signup />} />
+                            <Route path='/login' element={<Login />} />
+                        </Routes>
+             
+
+                      
         <div className="land">
             <div id="loader" style={{ display: bodyloading.display }}>
                 <span class="span"></span>
@@ -77,17 +84,6 @@ function LandingPage() {
                 </div>
            
                
-            
-                        <Routes>
-                            <Route path='/signup' element={<Signup />} />
-                            <Route path='/login' element={<Login />} />
-                        </Routes>
-             
-
-                      
-             
-               
-
             </div>
         
 
