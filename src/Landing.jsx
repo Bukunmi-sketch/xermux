@@ -75,7 +75,7 @@ function LandingPage() {
                     <p>Xermux</p>
                 </div>
            
-                <div class="bottom" data-aos="slide-up">
+               
             
                         <Routes>
                             <Route path='/signup' element={<Signup />} />
@@ -91,7 +91,7 @@ function LandingPage() {
                         <input type="submit" value="Login" class="login"  />
                         </a>
 
-                </div>
+             
                
 
             </div>
