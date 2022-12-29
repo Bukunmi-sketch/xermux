@@ -5,6 +5,7 @@ import useLocalStorage from './hooks/uselocalstorage';
 import './imports/index.css';
 import Signup from './pages/signup';
 import Login from './pages/login';
+import ActionButton from './components/button';
 
 import { FaCartPlus,FaBars,  FaTimes } from "react-icons/fa";
 /*
@@ -83,14 +84,7 @@ function LandingPage() {
                         </Routes>
              
 
-                        <a href='http://127.0.0.1:5173/signup'> 
-                        <input type="submit" value="Create New Account" class="signup"  onClick={() => {navigate("/signup")}} />
-                        </a>
-
-                        <a href='http://127.0.0.1:5173/login'>
-                        <input type="submit" value="Login" class="login"  />
-                        </a>
-
+                      
              
                
 
