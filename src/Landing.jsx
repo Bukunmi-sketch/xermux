@@ -44,10 +44,7 @@ function LandingPage() {
 
     return (
         <BrowserRouter>
-         <Routes>
-                            <Route path='/signup' element={<Signup />} />
-                            <Route path='/login' element={<Login />} />
-                        </Routes>
+        
              
 
                       
@@ -75,6 +72,10 @@ function LandingPage() {
             <div class="content" style={{ display: loading.display }}>
                 <h2>Welcome to <span class="webname">Xermux</span></h2>
 
+                <Routes>
+                            <Route path='/signup' element={<Signup />} />
+                            <Route path='/login' element={<Login />} />
+                        </Routes>
                 <div class="section" data-aos="fade-up">
                     <div class="get-started">Share your thoughts (political,sports,entertainments),ask questions ? play games,share your relationship,families, education etc problems,seek advice  all anonymously </div>
                 </div>
