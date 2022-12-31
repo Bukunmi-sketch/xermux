@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axio from 'axios';
+import axios from 'axios';
 
 
 function Signup() {
