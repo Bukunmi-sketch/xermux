@@ -3,9 +3,13 @@ import { BrowserRouter, Routes, Route,  Link } from 'react-router-dom';
 import axios from "axios";
 import useLocalStorage from './hooks/uselocalstorage';
 import './imports/index.css';
+import './css/footer.css';
 import Signup from './pages/signup';
 import Login from './pages/login';
+import LandingNav from './pages/landingnav';
+import Sectionb from './components/sectionb';
 import ActionButton from './components/button';
+import Footer from './components/footer';
 
 import { FaCartPlus,FaBars,  FaTimes } from "react-icons/fa";
 /*
@@ -19,6 +23,52 @@ function LandingPage() {
     const [loading, setLoading] = useState({ display: "none" });
     const [bodyloading, setbodyLoading] = useState({ display: "block" });
     const [Error, setError] = useState();
+    const [cartitems, setCartitems ]=useState([]);
+    const [cartdisplay, setcartdisplay]=useState({ left:"-70%",transition: "0.3s" });
+    const [cartshow ,setcartshow]=useState({ width:"0" });
+    const [authModal ,setauthModal]=useState({show:'false', width:"0" });
+    const [showRegisterPage, setshowRegisterPage]= useState(true);
+    const [checkout, setCheckout]= useState(true);
+    const [searchterm, setsearchterm] =useState("");
+    const [searchresult, setsearchresult] =useState([]);
+    const [jsonresult, setjsonresult] =useState([]);
+    const [delayloading, setdelayLoading] = useState({display:"none"});
+    const [message, setMessage]=useState('');
+    const [msgdisplay, setMsgdisplay] = useState({display:"none"});
+    const [userToken, setUserToken] = useState(2345);
+  
+    
+      const  onShowAuthModal=()=>{
+        setauthModal({show:true, width:"100%" ,transition: "0.3s"});
+      //  console.log(cartshow);
+        undisplay();
+      }
+    
+      const onHideAuthModal=()=>{
+        setauthModal({show:false, width:"0" });
+     //   console.log(cartshow);
+      }
+    
+      const unshow=()=>{
+        setcartshow({show:false, width:"0" });
+     //   console.log(cartshow);
+      }
+    
+      const onShowRegisterPage=()=>{
+        setshowRegisterPage(true);
+      }
+    
+      const onShowLoginPage=()=>{
+         setshowRegisterPage(false);
+      }
+    
+      function showMessage(){
+        setMsgdisplay({ display:"block" });
+      }
+    
+     function hideMessage(){
+      setMsgdisplay({ display:"none" });
+     }
 
     const Loader = () => {
         setTimeout(() => setLoading({ display: "block" }), 3000);
@@ -43,12 +93,8 @@ function LandingPage() {
     }, []);
 
     return (
-        <BrowserRouter>
-        
+         <div className="land">
              
-
-                      
-        <div className="land">
             <div id="loader" style={{ display: bodyloading.display }}>
                 <span class="span"></span>
                 <span class="span"></span>
@@ -58,42 +104,45 @@ function LandingPage() {
                 <span class="span"></span>
                 <span class="span"></span>
             </div>
+            <BrowserRouter>
            
-            <nav>
-                <div class="container">
-
-                    <h2 class="logo" > Xermux </h2>
-                    <div class="create">
-                    <Link to='/signup'> <button class="create-post">Create</button> </Link>
-                    <Link to='/login' >   <button class="create-post">Login</button> </Link>
-                    </div>
-                </div>
-            </nav>
+       
+            
             <div class="content" style={{ display: loading.display }}>
-                <h2>Welcome to <span class="webname">Xermux</span></h2>
+            {/* <h2>Welcome to <span class="webname">Xermux</span></h2>  -->  */}
 
                 <Routes>
-                            <Route path='/signup' element={<Signup />} />
+                            <Route path='/signup' element={
+          <Signup 
+          authModal={authModal} 
+          onShowAuthModal={ onShowAuthModal}  
+          Loader={Loader}
+          unLoader={unLoader}
+          onUnShow={unshow} 
+          onHideAuthModal={onHideAuthModal}
+          onShowRegisterPage={onShowRegisterPage}
+          onShowLoginPage={onShowLoginPage}
+          showRegisterPage={showRegisterPage}
+          userToken={userToken} />
+           } />
                             <Route path='/login' element={<Login />} />
+                            <Route path='/' element={
+                                <>
+                                <LandingNav />                                  
+                                <Sectionb />
+                                <ActionButton/>
+                                </>
+                            }/>
                         </Routes>
-                <div class="section" data-aos="fade-up">
-                    <div class="get-started">Share your thoughts (political,sports,entertainments),ask questions ? play games,share your relationship,families, education etc problems,seek advice  all anonymously </div>
-                </div>
-
-                <div class="logo-logo" data-aos="zoom-in">
-                    <p>Xermux</p>
-                </div>
+                
            
-                <ActionButton/>
+             
             </div>
         
 
-            <footer data-aos="flip-up">
-                Developed by Bukunmi Olarinde @2022
-                <a href="../profile/b" > <button class="contact">contact</button></a>
-            </footer>
-        </div>
+            <Footer />
         </BrowserRouter>
+        </div>
     );
 }
 

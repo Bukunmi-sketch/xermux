@@ -1,15 +1,16 @@
 import React from "react";
+import {  Link } from 'react-router-dom';
 
 function ActionButton() {
   return (
     <div class="bottom" data-aos="slide-up">
-      (
-      <a href="http://127.0.0.1:5173/signup">
+      
+      <Link to='/signup'>
         <input type="submit" value="Create New Account" class="signup" />
-      </a>
-      <a href="http://127.0.0.1:5173/login">
+      </Link>
+      <Link to='/login'>
         <input type="submit" value="Login" class="login" />
-      </a>
+      </Link>
     </div>
   );
 }

@@ -1,0 +1,64 @@
+/* -------------------------FOOTER-------------------*/
+
+.footer{
+    display: flex;
+    position: relative;
+    border: 1px solid #cecece;
+    background-color: white;
+    margin-top:50px;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    padding: 50px 0;
+    justify-content: space-around;
+}
+
+.footer-logo{
+    width: 100%;
+    border: 1px solid transparent;
+    width: 200px;
+    height: 60px;
+}
+
+.first-box, .second-box, .third-box{
+    width: 50%;
+    border:1px solid transparent;
+    margin: 20px;
+    height:250px;
+}
+
+.footer-head{
+    font-weight: bold;
+    color: green;
+
+}
+.footer ul li{
+    padding:7px;
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+    translate: all 300ms ease;
+    position: relative;
+    border: 1px solid transparent;
+}
+
+.footer ul li h3{
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    color: var(--color-black);
+   
+}
+
+li .buy-now{
+    text-align: center;
+    background-color: green;
+    border:1px solid transparent;
+    padding: 5px 30px;
+    color: white;
+    font-weight: bold;
+    border-radius:4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}

@@ -1,0 +1,121 @@
+:root{
+  --color-primary:rgb(17, 82, 17);
+  --color-white:white;
+  --color-danger:orangered;
+  --color-black:#000000;
+  --sticky-top-left:5.4rem;
+  --sticky-top-right:-18rem;
+  --color-green:#20B302;
+  --color-orange:#FF6600;
+}
+
+/* checkout forms              */
+
+
+.form{
+    margin: auto;
+    max-width: 480px;
+    background-color:transparent;
+    padding: 5px 20px 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    width :50%;
+  }
+  
+  .form-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+    margin: 10px;
+  }
+  
+  .contact-info{
+    font-family: "Montserrat", sans-serif;
+    font-weight:900;
+    margin: 0 10px;
+  }
+  
+  .namebox{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+    padding: 0px 10px 0px 10px;
+  }
+  
+  .flexnameboxa{
+    display: flex;
+    width:100%;
+    border: 1px solid transparent;
+    margin-top: 10px;
+  }
+  
+  .flexnameboxb{
+    display: flex;
+    flex-basis: 0 50%;
+    width:100%;
+    border: 1px solid transparent;
+  }
+  
+  .flexnameboxb .namebox{
+    border: 1px solid transparent;
+    width: 50%;
+  }
+  
+  .flexnameboxb .namebox:last-child{
+    border: 1px solid transparent;
+    width: 50%;
+  }
+  
+  .namebox label{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9em;
+  }
+  
+  .namebox input[type=text],.namebox input[type=email],.namebox input[type=number], select{
+    width:100%;
+    box-sizing:border-box;
+    outline:none;
+    font-family: "Montserrat", sans-serif;
+    font-weight:600;
+    margin-top: 10px;
+    margin-bottom:10px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: white;
+    font-size: 0.8em;
+  }
+  
+  /*
+  .namebox input[type=text]:hover,.namebox input[type=email]:hover,.namebox input[type=number]:hover, select:hover{
+    border: 2px solid black;
+  }
+  
+  */
+  .namebox textarea{
+    border-radius: 4px;
+    height: 130px;
+    padding: 10px;
+    text-align: left;
+    font-size: 0.8em;
+  }
+
+  .checkout-btn{
+    width:100%;
+    padding:12px 30px;
+    border: 1px solid var(--color-orange);
+    background-color: var(--color-orange);
+    color: white;
+    border-radius:3px;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.have-account{
+  border: 1px solid transparent;
+  width: 80%;
+  margin:20px auto;
+}
+  
