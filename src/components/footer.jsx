@@ -12,9 +12,9 @@ function Footer( { onUnDisplay, scrollto} ) {
         <div className="footer">
             <div className="first-box">
                 <ul>
-                    <li> <img src={logo} alt="afrimama"  className='footer-logo'/></li>
-                    <li> <p> Get your fresh items with no hidden cost while you spread your cost comfortably over 4 months </p></li>
-                    <li> <a href='#product'> <button className='buy-now' > Buy now</button></a></li>
+                    <li> Xermux</li>
+                    <li> <p> Be anonymous </p></li>
+                    <li> <a href='#product'> <button className='buy-now' > Sign up </button></a></li>
                   
                 </ul>
             </div>
@@ -35,7 +35,7 @@ function Footer( { onUnDisplay, scrollto} ) {
                     <li className='footer-head'>Contact Us</li>
                     <li>  
                              <span> <FaEnvelope style={ {color:"green"}} className="icons" /> </span>
-                            <h3>sales@afrimamafarms.com</h3>
+                            <h3>xermux@bucxcity</h3>
                     </li>
                     <li>
                              <span> <FaPhone style={ {color:"green"}} className="icons" /> </span>
@@ -43,7 +43,7 @@ function Footer( { onUnDisplay, scrollto} ) {
                     </li>
                     <li>
                              <span> <FaMapMarked style={ {color:"green"}}  className="icons" /> </span>
-                            <h3>Lagos, Nigeria</h3>
+                            <h3> Nigeria</h3>
                     </li>
 
                     <li className='footer-icon-li'> 

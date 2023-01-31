@@ -213,7 +213,6 @@ function Signup({
       });
   };
 
-  
   //when button is submitted
   const handleEmailRegisterSubmit = (event) => {
     event.preventDefault();
@@ -259,7 +258,51 @@ function Signup({
   };
 
   //when button is submitted
-  const handleLoginSubmit = (event) => {
+  const handleEmailLoginSubmit = (event) => {
+    event.preventDefault();
+    Loader();
+
+    const name = event.target.name;
+    const value = event.target.value;
+    console.log(addedcart.toString());
+    setinputs((values) => ({
+      ...values,
+      [name]: value,
+    }));
+    //console.log(inputs);
+
+    const API = "http://localhost/sales/Grittystore/Api/LoginAccount.php";
+
+    axios
+      .post(API, inputs, {
+        headers: {
+          "content-type": "application/json",
+        },
+      })
+      .then(function (response) {
+        console.log(response);
+        if (response.status === 200) {
+          //    setOrders(response.data);
+          console.log(response.data);
+          if (response.data.status !== 500) {
+            navigate(`/page/${response.data.userid} `);
+            onClear();
+            onUnShow();
+            unLoader();
+          } else {
+            setErrormsg(response.data.message);
+            unLoader();
+          }
+        }
+      })
+      .catch(function (error) {
+        console.log("errorrrr", error);
+        unLoader();
+      });
+  };
+
+  //when button is submitted
+  const handleMobileLoginSubmit = (event) => {
     event.preventDefault();
     Loader();
 
@@ -331,17 +374,17 @@ function Signup({
                   </div>
 
                   <div className="flexnameboxa">
-                      <div className="namebox">
-                        <label htmlFor="email">Email Address</label>
-                        <input
-                          type="email"
-                          name="email"
-                          value={inputs.email || ""}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-                 
+                    <div className="namebox">
+                      <label htmlFor="email">Email Address</label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={inputs.email || ""}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+
                     <div className="namebox">
                       <label htmlFor="address">Country</label>
                       <select name="country" onChange={handleChange} required>
@@ -407,16 +450,16 @@ function Signup({
                   </div>
 
                   <div className="flexnameboxa">
-                  <div className="namebox">
-                        <label htmlFor="email">Mobile No :</label>
-                        <input
-                          type="number"
-                          name="mobile"
-                          value={inputs.mobile || ""}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
+                    <div className="namebox">
+                      <label htmlFor="email">Mobile No :</label>
+                      <input
+                        type="number"
+                        name="mobile"
+                        value={inputs.mobile || ""}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
 
                     <div className="namebox">
                       <label htmlFor="address">Country</label>
@@ -472,116 +515,94 @@ function Signup({
           ) : (
             //LOGIN PAGE
             <>
-              <p className="contact-info">Login to Grittystore</p>
+              <p className="contact-info">Login to Xermux</p>
 
-              <div className="mobilePhone">
-                <span onClick={onSignUpEmail}> Login with Email </span>
-                OR
+           
+              {signUpEmail ? (
+                <>
+                   <div className="mobilePhone">
                 <span onClick={onSignUpMobile}> Login with Mobile No </span>
               </div>
- 
- { signUpEmail ? (
-    <form onSubmit={handleEmailLoginSubmit}>
-    <div className="namebox">
-      <label htmlFor="address">Email</label>
-      <input
-        type="text"
-        name="uniqueid"
-        value={inputs.uniqueid || ""}
-        onChange={handleChange}
-        required
-      />
-    </div>
 
-    <div className="namebox">
-      <label htmlFor="address">Password</label>
-      <input
-        type="text"
-        name="referral"
-        value={inputs.referral || ""}
-        onChange={handleChange}
-      />
-    </div>
+                <form onSubmit={handleEmailLoginSubmit}>
+                  <div className="namebox">
+                    <label htmlFor="address">Email</label>
+                    <input
+                      type="text"
+                      name="uniqueid"
+                      placeholder="Email"
+                      value={inputs.uniqueid || ""}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
 
-    <div className="namebox">
-      <div style={{ color: "#FF6600" }}> {Errormsg} </div>
-      <button type="submit" className="checkout-btn">
-        {" "}
-        Log In
-      </button>
-    </div>
-   </form>
- ) : (
-  <form onSubmit={handleMobileLoginSubmit}>
-  <div className="namebox">
-    <label htmlFor="address">Mobile No </label>
-    <input
-      type="text"
-      name="uniqueid"
-      value={inputs.uniqueid || ""}
-      onChange={handleChange}
-      required
-    />
-  </div>
+                  <div className="namebox">
+                    <label htmlFor="address">Password</label>
+                    <input
+                      type="text"
+                      placeholder="Password"
+                      name="referral"
+                      value={inputs.referral || ""}
+                      onChange={handleChange}
+                    />
+                  </div>
 
-  <div className="namebox">
-    <label htmlFor="address">Password</label>
-    <input
-      type="text"
-      name="referral"
-      value={inputs.referral || ""}
-      onChange={handleChange}
-    />
-  </div>
+                  <div className="namebox">
+                    <div style={{ color: "#FF6600" }}> {Errormsg} </div>
+                    <button type="submit" className="checkout-btn">
+                     
+                      Log In
+                    </button>
+                  </div>
+                </form>
+                </>
+              ) : (
+                <>
+                 <div className="mobilePhone">
+                <span onClick={onSignUpEmail}> Login with Email </span>
+              </div>
+                <form onSubmit={handleMobileLoginSubmit}>
+                  <div className="namebox">
+                    <label htmlFor="address">Mobile No </label>
+                    <input
+                      type="text"
+                      name="uniqueid"
+                      placeholder="Mobile No"
+                      value={inputs.uniqueid || ""}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
 
-  <div className="namebox">
-    <div style={{ color: "#FF6600" }}> {Errormsg} </div>
-    <button type="submit" className="checkout-btn">
-      {" "}
-      Log In
-    </button>
-  </div>
- </form>
- ) }
+                  <div className="namebox">
+                    <label htmlFor="address">Password</label>
+                    <input
+                      type="text"
+                      name="referral"
+                      value={inputs.referral || ""}
+                      onChange={handleChange}
+                    />
+                  </div>
 
-              <form onSubmit={handleLoginSubmit}>
-                <div className="namebox">
-                  <label htmlFor="address">Email or Mobile No </label>
-                  <input
-                    type="text"
-                    name="uniqueid"
-                    value={inputs.uniqueid || ""}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="namebox">
-                  <label htmlFor="address">Password</label>
-                  <input
-                    type="text"
-                    name="referral"
-                    value={inputs.referral || ""}
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <div className="namebox">
-                  <div style={{ color: "#FF6600" }}> {Errormsg} </div>
-                  <button type="submit" className="checkout-btn">
-                    {" "}
-                    Log In
-                  </button>
-                </div>
-               </form>
-                <div className="have-account">
-                  {" "}
-                  New User ? <span onClick={onShowRegisterPage}>
-                    {" "}
-                    Sign up{" "}
-                  </span>{" "}
-                </div>
-             
+                  <div className="namebox">
+                    <div style={{ color: "#FF6600" }}> {Errormsg} </div>
+                    <button type="submit" className="checkout-btn">
+                     
+                      Log In
+                    </button>
+                  </div>
+                </form>
+              </>
+              )}
+          
+              <div className="have-account">
+               
+                New User ? <span onClick={onShowRegisterPage}>
+                 
+                  Sign up{" "}
+                </span>{" "}
+              </div>
             </>
           )}
         </div>
