@@ -35,7 +35,7 @@
 
 .footer-head{
     font-weight: bold;
-    color: green;
+    color: var(--color-primary);
 
 }
 .footer ul li{
@@ -57,7 +57,7 @@
 
 li .buy-now{
     text-align: center;
-    background-color: green;
+    background-color: var(--color-primary);
     border:1px solid transparent;
     padding: 5px 30px;
     color: white;

@@ -1,12 +1,10 @@
 :root{
-  --color-primary:rgb(17, 82, 17);
   --color-white:white;
-  --color-danger:orangered;
   --color-black:#000000;
   --sticky-top-left:5.4rem;
   --sticky-top-right:-18rem;
   --color-green:#20B302;
-  --color-orange:#FF6600;
+  --color-primary:#FF6600;
 }
 
 /* checkout forms              */
@@ -80,10 +78,11 @@
     margin-top: 10px;
     margin-bottom:10px;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-primary);
     border-radius: 3px;
-    background-color: white;
+    background-color: rgb(24, 21, 21);
     font-size: 0.8em;
+    color: white;
   }
 
   select{
@@ -107,8 +106,8 @@
   .checkout-btn{
     width:100%;
     padding:12px 30px;
-    border: 1px solid var(--color-orange);
-    background-color: var(--color-orange);
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-primary);
     color: white;
     border-radius:3px;
     font-size: 1em;
@@ -121,5 +120,9 @@
   border: 1px solid transparent;
   width: 80%;
   margin:20px auto;
+}
+
+.have-account span{
+  color: var(--color-primary);
 }
   
