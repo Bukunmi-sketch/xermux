@@ -5,7 +5,7 @@ import axios from "axios";
 import '../css/form.css';
 import useLocalStorage from '../hooks/uselocalstorage';
 
-function Signup({ onAuthModal, authModal, Loader, unLoader, onHideAuthModal, showRegisterPage, onShowRegisterPage, onShowLoginPage , setUserToken }) {
+function Signup({ onAuthModal, authModal, Loader, unLoader, onHideAuthModal, showRegisterPage, onShowRegisterPage, onShowLoginPage , onSignUpMobile, onSignUpEmail, signUpEmail , setUserToken }) {
     const navigate = useNavigate();
 
     const [inputs, setinputs] =useState({
@@ -153,10 +153,15 @@ function Signup({ onAuthModal, authModal, Loader, unLoader, onHideAuthModal, sho
                      
                       { showRegisterPage ? (  //SIGNUP PAGE
                         <>
-                         <p className="contact-info"> Welcome, to Grittystore</p>
+                        <div className="mobilePhone"> 
+                          <span onClick={onSignUpEmail}> Sign up with Email </span>
+                          OR
+                          <span onClick={onSignUpMobile}> Sign up with Mobile No </span>
+                        </div>
+                         <p className="contact-info"> Welcome to Grittystore</p>
                       <form onSubmit={handleRegisterSubmit}>   
                       <div className="errorinfo"></div>
-                      <div className="flexnameboxa">
+                 {/*      <div className="flexnameboxa">
                         <div className="namebox">
                           <label htmlFor="Name">FirstName: </label>
                           <input
@@ -166,25 +171,55 @@ function Signup({ onAuthModal, authModal, Loader, unLoader, onHideAuthModal, sho
                             onChange={handleChange}
                             required
                           />
-                        </div>
+                        </div>  */} 
 
                         <div className="namebox">
-                          <label htmlFor="Name">LastName: </label>
+                          <label htmlFor="Name">Username </label>
                           <input
                             type="text"
-                            name="lastname"
-                            value={inputs.lastname || ""}
+                            name="username"
+                            value={inputs.username || ""}
                             onChange={handleChange}
                             required
                           />
                         </div>
-                      </div>
 
-                      <div className="flexnameboxb">
+                        <div className="flexnameboxa">
+                  {/*   </div>  */} 
+                  { signUpEmail ? (
+                    
+                       <div className="namebox">
+                          <label htmlFor="email">Email Address</label>
+                          <input
+                            type="email"
+                            name="email"
+                            value={inputs.email || ""}
+                            onChange={handleChange}
+                            required
+                          />
+                    </div>
+                  
+                  ) : (
+
+                    <div className="namebox">
+                    <label htmlFor="email">Mobile No :</label>
+                    <input
+                      type="number"
+                      name="mobile"
+                      value={inputs.mobile || ""}
+                      onChange={handleChange}
+                      required
+                    />
+              </div>
+            
+                  ) }  
+                    
+
+                    
                         <div className="namebox">
-                          <label htmlFor="address">State </label>
+                          <label htmlFor="address">Country</label>
                           <select
-                            name="state"
+                            name="country"
                             onChange={handleChange}
                             required
                           >
@@ -199,50 +234,8 @@ function Signup({ onAuthModal, authModal, Loader, unLoader, onHideAuthModal, sho
                             ))}
                           </select>
                         </div>
-
-                        <div className="namebox">
-                          <label htmlFor="email">Email Address</label>
-                          <input
-                            type="email"
-                            name="email"
-                            value={inputs.email || ""}
-                            onChange={handleChange}
-                            required
-                          />
-                        </div>
-                      </div>
-
-                      <div className="flexnameboxb">
-                        <div className="namebox">
-                          <label htmlFor="phono_no">Phone No</label>
-                          <input
-                            type="number"
-                            name="phone"
-                            value={inputs.phone || ""}
-                            onChange={handleChange}
-                            required
-                          />
                         </div>
 
-                        <div className="namebox">
-                          <label htmlFor="address">Local Government </label>
-                          <select
-                            name="lga"
-                            onChange={handleChange}
-                            required
-                          >
-                            {localgov.map((lga) => (
-                              <option
-                                key={lga}
-                                value={lga}
-                                onChange={handleChange}
-                              >
-                                {lga}
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-                      </div>
 
                       <div className="namebox">
                         <label htmlFor="address"> Password </label>

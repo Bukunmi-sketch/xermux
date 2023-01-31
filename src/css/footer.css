@@ -4,7 +4,7 @@
     display: flex;
     position: relative;
     border: 1px solid #cecece;
-    background-color: white;
+    background-color:black;
     margin-top:50px;
     bottom: 0;
     width: 100%;
@@ -12,6 +12,7 @@
     padding: 50px 0;
     justify-content: space-around;
 }
+
 
 .footer-logo{
     width: 100%;
@@ -25,6 +26,11 @@
     border:1px solid transparent;
     margin: 20px;
     height:250px;
+}
+
+.second-box ul li Link{
+    text-decoration: none;
+    color: white;
 }
 
 .footer-head{
@@ -45,7 +51,7 @@
 .footer ul li h3{
     margin-left: 1.5rem;
     font-size: 1rem;
-    color: var(--color-black);
+    color: var(--color-white);
    
 }
 

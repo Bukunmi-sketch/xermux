@@ -32,7 +32,7 @@
   .contact-info{
     font-family: "Montserrat", sans-serif;
     font-weight:900;
-    margin: 0 10px;
+    margin:10px auto;
   }
   
   .namebox{
@@ -84,6 +84,10 @@
     border-radius: 3px;
     background-color: white;
     font-size: 0.8em;
+  }
+
+  select{
+    width: 200%;
   }
   
   /*

@@ -22,7 +22,7 @@ function Footer( { onUnDisplay, scrollto} ) {
             <div className="second-box">
                 <ul>
                     <li className='footer-head'>Useful Links</li>
-                        <li> <Link to='/' className="menu-item" onClick={()=>onUnDisplay()} style={ {color:"black"}}> Home </Link>  </li> 
+                    <li> <Link to='/' className="menu-item" onClick={()=>onUnDisplay()} style={ {color:"black"}}> Home </Link>  </li> 
                        <li> <Link to='/product' className="menu-item" onClick={()=>onUnDisplay()} style={ {color:"black"}}> Product   </Link> </li>
                        <li> <Link to='/Team' className="menu-item"  onClick={()=>onUnDisplay() } style={ {color:"black"}}> Team </Link>  </li>
                        <li> <a href='https://api.afrimamafarms.com/agent/Views/register.php' className="menu-item" target="_blank" onClick={()=>onUnDisplay() } style={ {color:"black"}}> Agent </a>  </li> 

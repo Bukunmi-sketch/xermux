@@ -28,7 +28,8 @@ function LandingPage() {
     const [cartshow ,setcartshow]=useState({ width:"0" });
     const [authModal ,setauthModal]=useState({show:'false', width:"0" });
     const [showRegisterPage, setshowRegisterPage]= useState(true);
-    const [checkout, setCheckout]= useState(true);
+    const [signUpEmail, setsignUpEmail]= useState(true);
+    const [signUpMobile, setsignUpMobile]= useState(true);
     const [searchterm, setsearchterm] =useState("");
     const [searchresult, setsearchresult] =useState([]);
     const [jsonresult, setjsonresult] =useState([]);
@@ -54,6 +55,14 @@ function LandingPage() {
      //   console.log(cartshow);
       }
     
+      const onSignUpEmail=()=>{
+        setsignUpEmail(true);
+      }
+    
+      const onSignUpMobile=()=>{
+         setsignUpEmail(false);
+      }
+
       const onShowRegisterPage=()=>{
         setshowRegisterPage(true);
       }
@@ -123,7 +132,11 @@ function LandingPage() {
           onShowRegisterPage={onShowRegisterPage}
           onShowLoginPage={onShowLoginPage}
           showRegisterPage={showRegisterPage}
-          userToken={userToken} />
+          userToken={userToken} 
+          onSignUpEmail={onSignUpEmail}
+          onSignUpMobile={onSignUpMobile}
+          signUpEmail={signUpEmail}
+          />
            } />
                             <Route path='/login' element={<Login />} />
                             <Route path='/' element={
