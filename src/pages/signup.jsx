@@ -30,6 +30,214 @@ function Signup({
 
   const options = ["", "Oyo", "Lagos", "Osun", "Ondo"];
 
+  var countries = [
+    "Afghanistan",
+    "Albania",
+    "Algeria",
+    "Andorra",
+    "Angola",
+    "Anguilla",
+    "Antigua &amp; Barbuda",
+    "Argentina",
+    "Armenia",
+    "Aruba",
+    "Australia",
+    "Austria",
+    "Azerbaijan",
+    "Bahamas",
+    "Bahrain",
+    "Bangladesh",
+    "Barbados",
+    "Belarus",
+    "Belgium",
+    "Belize",
+    "Benin",
+    "Bermuda",
+    "Bhutan",
+    "Bolivia",
+    "Bosnia &amp; Herzegovina",
+    "Botswana",
+    "Brazil",
+    "British Virgin Islands",
+    "Brunei",
+    "Bulgaria",
+    "Burkina Faso",
+    "Burundi",
+    "Cambodia",
+    "Cameroon",
+    "Cape Verde",
+    "Cayman Islands",
+    "Chad",
+    "Chile",
+    "China",
+    "Colombia",
+    "Congo",
+    "Cook Islands",
+    "Costa Rica",
+    "Cote D Ivoire",
+    "Croatia",
+    "Cruise Ship",
+    "Cuba",
+    "Cyprus",
+    "Czech Republic",
+    "Denmark",
+    "Djibouti",
+    "Dominica",
+    "Dominican Republic",
+    "Ecuador",
+    "Egypt",
+    "El Salvador",
+    "Equatorial Guinea",
+    "Estonia",
+    "Ethiopia",
+    "Falkland Islands",
+    "Faroe Islands",
+    "Fiji",
+    "Finland",
+    "France",
+    "French Polynesia",
+    "French West Indies",
+    "Gabon",
+    "Gambia",
+    "Georgia",
+    "Germany",
+    "Ghana",
+    "Gibraltar",
+    "Greece",
+    "Greenland",
+    "Grenada",
+    "Guam",
+    "Guatemala",
+    "Guernsey",
+    "Guinea",
+    "Guinea Bissau",
+    "Guyana",
+    "Haiti",
+    "Honduras",
+    "Hong Kong",
+    "Hungary",
+    "Iceland",
+    "India",
+    "Indonesia",
+    "Iran",
+    "Iraq",
+    "Ireland",
+    "Isle of Man",
+    "Israel",
+    "Italy",
+    "Jamaica",
+    "Japan",
+    "Jersey",
+    "Jordan",
+    "Kazakhstan",
+    "Kenya",
+    "Kuwait",
+    "Kyrgyz Republic",
+    "Laos",
+    "Latvia",
+    "Lebanon",
+    "Lesotho",
+    "Liberia",
+    "Libya",
+    "Liechtenstein",
+    "Lithuania",
+    "Luxembourg",
+    "Macau",
+    "Macedonia",
+    "Madagascar",
+    "Malawi",
+    "Malaysia",
+    "Maldives",
+    "Mali",
+    "Malta",
+    "Mauritania",
+    "Mauritius",
+    "Mexico",
+    "Moldova",
+    "Monaco",
+    "Mongolia",
+    "Montenegro",
+    "Montserrat",
+    "Morocco",
+    "Mozambique",
+    "Namibia",
+    "Nepal",
+    "Netherlands",
+    "Netherlands Antilles",
+    "New Caledonia",
+    "New Zealand",
+    "Nicaragua",
+    "Niger",
+    "Nigeria",
+    "Norway",
+    "Oman",
+    "Pakistan",
+    "Palestine",
+    "Panama",
+    "Papua New Guinea",
+    "Paraguay",
+    "Peru",
+    "Philippines",
+    "Poland",
+    "Portugal",
+    "Puerto Rico",
+    "Qatar",
+    "Reunion",
+    "Romania",
+    "Russia",
+    "Rwanda",
+    "Saint Pierre &amp; Miquelon",
+    "Samoa",
+    "San Marino",
+    "Satellite",
+    "Saudi Arabia",
+    "Senegal",
+    "Serbia",
+    "Seychelles",
+    "Sierra Leone",
+    "Singapore",
+    "Slovakia",
+    "Slovenia",
+    "South Africa",
+    "South Korea",
+    "Spain",
+    "Sri Lanka",
+    "St Kitts &amp; Nevis",
+    "St Lucia",
+    "St Vincent",
+    "St. Lucia",
+    "Sudan",
+    "Suriname",
+    "Swaziland",
+    "Sweden",
+    "Switzerland",
+    "Syria",
+    "Taiwan",
+    "Tajikistan",
+    "Tanzania",
+    "Thailand",
+    "Timor L'Este",
+    "Togo",
+    "Tonga",
+    "Trinidad &amp; Tobago",
+    "Tunisia",
+    "Turkey",
+    "Turkmenistan",
+    "Turks &amp; Caicos",
+    "Uganda",
+    "Ukraine",
+    "United Arab Emirates",
+    "United Kingdom",
+    "Uruguay",
+    "Uzbekistan",
+    "Venezuela",
+    "Vietnam",
+    "Virgin Islands (US)",
+    "Yemen",
+    "Zambia",
+    "Zimbabwe",
+  ];
+
   //handle the changes
   const handleChange = (event) => {
     const name = event.target.name;
@@ -183,7 +391,7 @@ function Signup({
     }));
     //console.log(inputs);
 
-    const API = "http://localhost/sales/Grittystore/Api/RegisterAccount.php";
+    const API = "http://localhost/websites/xermux/Api/RegisterAccount.php";
 
     axios
       .post(API, inputs, {
@@ -227,7 +435,7 @@ function Signup({
     }));
     //console.log(inputs);
 
-    const API = "http://localhost/sales/Grittystore/Api/RegisterAccount.php";
+    const API = "http://localhost/websites/xermux/Api/RegisterAccount.php";
 
     axios
       .post(API, inputs, {
@@ -271,7 +479,7 @@ function Signup({
     }));
     //console.log(inputs);
 
-    const API = "http://localhost/sales/Grittystore/Api/LoginAccount.php";
+    const API = "http://localhost/website/xermux/Api/LoginAccount.php";
 
     axios
       .post(API, inputs, {
@@ -315,7 +523,7 @@ function Signup({
     }));
     //console.log(inputs);
 
-    const API = "http://localhost/sales/Grittystore/Api/LoginAccount.php";
+    const API = "http://localhost/websites/xermux/Api/LoginAccount.php";
 
     axios
       .post(API, inputs, {
@@ -351,15 +559,13 @@ function Signup({
         <div className="form-container">
           {showRegisterPage ? ( //SIGNUP PAGE
             <>
-              <div className="mobilePhone">
-                <span onClick={onSignUpEmail}> Sign up with Email </span>
-                OR
-                <span onClick={onSignUpMobile}> Sign up with Mobile No </span>
-              </div>
               <p className="contact-info"> Welcome to Grittystore</p>
 
               {signUpEmail ? (
                 <form onSubmit={handleEmailRegisterSubmit}>
+                  <div className="mobilePhone">
+                    <span onClick={onSignUpMobile}> Sign up with Mobile No Instead  </span>
+                  </div>
                   <div className="errorinfo"></div>
 
                   <div className="namebox">
@@ -388,7 +594,7 @@ function Signup({
                     <div className="namebox">
                       <label htmlFor="address">Country</label>
                       <select name="country" onChange={handleChange} required>
-                        {options.map((option) => (
+                        {countries.map((option) => (
                           <option
                             key={option}
                             value={option}
@@ -436,6 +642,9 @@ function Signup({
                 </form>
               ) : (
                 <form onSubmit={handleMobileRegisterSubmit}>
+                  <div className="mobilePhone">
+                    <span onClick={onSignUpEmail}> Sign up with Email Instead</span>
+                  </div>
                   <div className="errorinfo"></div>
 
                   <div className="namebox">
@@ -464,7 +673,7 @@ function Signup({
                     <div className="namebox">
                       <label htmlFor="address">Country</label>
                       <select name="country" onChange={handleChange} required>
-                        {options.map((option) => (
+                        {countries.map((option) => (
                           <option
                             key={option}
                             value={option}
@@ -517,91 +726,84 @@ function Signup({
             <>
               <p className="contact-info">Login to Xermux</p>
 
-           
               {signUpEmail ? (
                 <>
-                   <div className="mobilePhone">
-                <span onClick={onSignUpMobile}> Login with Mobile No </span>
-              </div>
-
-                <form onSubmit={handleEmailLoginSubmit}>
-                  <div className="namebox">
-                    <label htmlFor="address">Email</label>
-                    <input
-                      type="text"
-                      name="uniqueid"
-                      placeholder="Email"
-                      value={inputs.uniqueid || ""}
-                      onChange={handleChange}
-                      required
-                    />
+                  <div className="mobilePhone">
+                    <span onClick={onSignUpMobile}> Login with Mobile No </span>
                   </div>
 
-                  <div className="namebox">
-                    <label htmlFor="address">Password</label>
-                    <input
-                      type="text"
-                      placeholder="Password"
-                      name="referral"
-                      value={inputs.referral || ""}
-                      onChange={handleChange}
-                    />
-                  </div>
+                  <form onSubmit={handleEmailLoginSubmit}>
+                    <div className="namebox">
+                      <label htmlFor="address">Email</label>
+                      <input
+                        type="text"
+                        name="uniqueid"
+                        placeholder="Email"
+                        value={inputs.uniqueid || ""}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
 
-                  <div className="namebox">
-                    <div style={{ color: "#FF6600" }}> {Errormsg} </div>
-                    <button type="submit" className="checkout-btn">
-                     
-                      Log In
-                    </button>
-                  </div>
-                </form>
+                    <div className="namebox">
+                      <label htmlFor="address">Password</label>
+                      <input
+                        type="text"
+                        placeholder="Password"
+                        name="referral"
+                        value={inputs.referral || ""}
+                        onChange={handleChange}
+                      />
+                    </div>
+
+                    <div className="namebox">
+                      <div style={{ color: "#FF6600" }}> {Errormsg} </div>
+                      <button type="submit" className="checkout-btn">
+                        Log In
+                      </button>
+                    </div>
+                  </form>
                 </>
               ) : (
                 <>
-                 <div className="mobilePhone">
-                <span onClick={onSignUpEmail}> Login with Email </span>
-              </div>
-                <form onSubmit={handleMobileLoginSubmit}>
-                  <div className="namebox">
-                    <label htmlFor="address">Mobile No </label>
-                    <input
-                      type="text"
-                      name="uniqueid"
-                      placeholder="Mobile No"
-                      value={inputs.uniqueid || ""}
-                      onChange={handleChange}
-                      required
-                    />
+                  <div className="mobilePhone">
+                    <span onClick={onSignUpEmail}> Login with Email </span>
                   </div>
+                  <form onSubmit={handleMobileLoginSubmit}>
+                    <div className="namebox">
+                      <label htmlFor="address">Mobile No </label>
+                      <input
+                        type="text"
+                        name="uniqueid"
+                        placeholder="Mobile No"
+                        value={inputs.uniqueid || ""}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
 
-                  <div className="namebox">
-                    <label htmlFor="address">Password</label>
-                    <input
-                      type="text"
-                      name="referral"
-                      value={inputs.referral || ""}
-                      onChange={handleChange}
-                    />
-                  </div>
+                    <div className="namebox">
+                      <label htmlFor="address">Password</label>
+                      <input
+                        type="text"
+                        name="referral"
+                        value={inputs.referral || ""}
+                        onChange={handleChange}
+                      />
+                    </div>
 
-                  <div className="namebox">
-                    <div style={{ color: "#FF6600" }}> {Errormsg} </div>
-                    <button type="submit" className="checkout-btn">
-                     
-                      Log In
-                    </button>
-                  </div>
-                </form>
-              </>
+                    <div className="namebox">
+                      <div style={{ color: "#FF6600" }}> {Errormsg} </div>
+                      <button type="submit" className="checkout-btn">
+                        Log In
+                      </button>
+                    </div>
+                  </form>
+                </>
               )}
-          
+
               <div className="have-account">
-               
-                New User ? <span onClick={onShowRegisterPage}>
-                 
-                  Sign up{" "}
-                </span>{" "}
+                New User ? <span onClick={onShowRegisterPage}>Sign up </span>{" "}
               </div>
             </>
           )}
