@@ -4,7 +4,6 @@ import "../css/App.css";
 
 function LandingNav() {
     return ( 
-        <nav>
                 <header>
 
                     <h2 class="logo" > Xermux </h2>
@@ -13,7 +12,7 @@ function LandingNav() {
                     <Link to='/login' >   <button class="create-post">Login</button> </Link>
                     </div>
                 </header>
-            </nav>
+
      );
 }
 

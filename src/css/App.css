@@ -17,28 +17,20 @@ margin: 0;
     --color-primary:#FF6600;
 }
 
-html{
-    scroll-behavior: smooth;
-}
 
-
-body {
-background-color: #D7D1DB;
-background-color: var(--color-white);
+body,html {
+padding: 0;
+margin: 0;
+background-color: var(--color-black);
 border: 1px solid transparent;
+scroll-behavior: smooth;
+color:white;
 }
 
 .app{
- padding:0;
  border: 1px solid transparent;
 }
 
-/*GENERAL STYLES */
-.container{
-    width:100%;
-    margin:0 auto;
-    border: 1px solid transparent;
-}
 
 /* ----------------------------------------------------------NAVBAR ---------------------------------------*/
 
@@ -161,483 +153,66 @@ header{
  
  
 /* ------------------------------------------------------END OF NAVBAR ---------------------------------------*/
-.about h6{
-    font-size: 1.5em;
-}
-
-.buyarrow{
-    display: flex;
-    flex-direction: column;
-}
-
-.arrowdown{
-    margin:15px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    text-align: center;
-    color:green;
-    font-size: 1.5em;
-}
-
-
-
-
-.content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-}
-
 
 /* ------------------FIRST SECTION--------------------------*/
+.logo-logo{
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+
 .sectiona{
-    background-color: white;
+   
     height: 200px;
     width:100%;
     margin-top:60px;
-    border: 1px solid transparent;
+    border: 1px solid red;
     display: flex;
+    flex-direction: column;
     height:500px;
     align-items: center;
     justify-content: center;
     
 }
 
-.sectiona .boxa{
+.sectiona .get-started{
    display: flex;
-   flex-direction: column;
-   border: 1px solid transparent;
-   width: 50%;
-   padding:80px 20px 20px 40px;
-   height: 100%;
-}
-
-/* -----------------first flex box--------------------------*/
-.boxa-content{
-   border: 1px solid transparent;
-   height: 100%;
-}
-
-.Natural{
-    font-weight: 700;
-    font-size:3em;
-    text-align: center;
-    font-family: "DM Sans",sans-serif;
-    margin-top: 10px;
    
+   border: 1px solid transparent;
+   width: 70%;
+   padding:20px;
 }
 
-.Natural span{
-    color:var(--color-orange) ;
-    font-family: "DM Sans",sans-serif;
-}
-
-.boxa-content p{
-   font-weight:400;
-}
-
-.spanbold{
-    font-weight: bold;
-}
-
-.buy-now{
-
-    background-color: green;
+.action-button-container{
     border:1px solid transparent;
-    padding: 5px 30px;
-    color: white;
-    font-weight: bold;
-    border-radius:4px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    cursor: pointer;
-}
-
-
-.sectiona .boxb{
-    border:1px solid var(--color-green);
     width: 50%;
-    height: 100%;
-    background-color: var(--color-green);
-    border-radius:0 0 0 30px;
-}
-
-/* -----------------straight image--------------------------*/
-.boxb .imga{
-    margin:50px 0 0 -100px;
-    height:250px;
-    width: 250px;
-    border: 1px solid transparent;
-}
-
-/* -----------------slant image--------------------------*/
-.boxb .imgb{
-    height: 350px;
-    width: 350px;
-    border: 1px solid transparent;
-    position: absolute;
-    margin:-300px 0 0 -50px;
-    
-}
-
-.about button{
-    text-align: center;
-    background-color: green;
-    border:1px solid transparent;
-    padding: 5px 30px;
-    color: white;
-    font-weight: bold;
-    border-radius:4px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-
-
-
-.about h6, h5{
-    font-weight: bold;
-    text-align: center;
-    font-family: "poppins",sans-serif;
-}
-
-.about span{
-    color: orangered;
-}
-
-input[type=search]{
-    width:70%;
-    background-color: #ecf1f1f6;
-    height: 45px;
-    border-radius: 5px;
-    border: 1px solid transparent;
-    text-align: center;
-    margin:0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position:relative;
-    font-size: 0.8em;
-}
-
-input[type=search]:hover{
-   border:1px solid #f8f8f8;
-}
-
-aside{
-    border:1px solid transparent;
-    width:100%;
-}
-
-/* -------------------------WHY-------------------*/
-
-.section-why{
-    border:1px solid transparent;
-    height: 500px;
-}
-
-.try{
-    color: #FF6600;
-}
-
-.section-why h3{
-    font-weight: 700;
-    margin:20px auto;
-    text-align: center;
-   
-}
-
-.farm-image-box{
-    width: 50%;
-    height: 300px;  
-    position: relative;
-    top: 0;
-    border: 1px solid transparent;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-}
-
-.farm-imagea{
-   width: 220px;
-   height: 220px;  
-   position: absolute;
-}
-
-.farm-imageb{
-    width: 120px;
-    height: 120px; 
-    margin:70px 0 0 -100px;
-    position: absolute;
-}
-
-.farm-imagec{
-    width: 100px;
-    height:100px; 
-    margin:50px 0 0 80px;
-    position: absolute;
-}
-
-.farm-imaged{
-    width: 140px;
-    height:140px; 
-    margin:150px 0 0 20px;
-    position: absolute;
-}
-
-/* -------------------------OUR CLIENT-------------------*/
-
-.our-client{
-    background-color: var(--color-orange);
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.client-boxa{
-   border: 1px solid transparent;
-/*    position: absolute;
-  margin: -115px 0 0 0;
-   width: 30%;
-   */
-   margin: -115px 0 0 0;
-}
-
- /*
-.suit-images{
-   height:75%;
-   
-    position: absolute;
-    width:500px;
-    aspect-ratio: 1/1;
-    overflow: visible;
-    margin:-93px 0 0 -30px;
-    
-}
-*/
-
-.client-boxb{
-    display: flex;
-    flex-direction: column;
-    margin-left:10px;
-    border: 1px solid transparent;
-    height: 100%;
-    width: 100%;
-}
-
-.client-boxb h3{
-    color: white;
-    font-weight: 600;
-    margin:50px 0 0 0;
-    font-size:2.5em;
-}
-
-.client-boxb p{
-    color: white;
-    font-weight: 700;
-    margin:auto;
-    font-size: 2em;
-}
-
-.delivered-con{
-    display: flex;
-    border:1px solid transparent;
-    justify-content:space-around;
-    height: 100%;
-}
-
-.delivered{
-   display: block;
-   text-align: center;
-   margin-top: 100px;
-}
-
-.delivered .italic-order{
-    color: white;
-    margin:-5px 0 0 0;
-    font-weight: 500;
-    font-style: italic;
-    font-size: 0.8em;
-}
-
-
-.img-con{
-    display: flex;
-    flex-direction: column;    
-    border: 1px solid transparent;
-    align-items: center;
-    justify-content: center;
-}
-
-.img-con img{
-    border-bottom:40px solid white;
-    border-radius: 20px;
-    height:160px;
-    width:350px;
-    border-radius:20px;
-}
-
-.img-con span{
-    width:100%;
-    padding: 10px;
-    margin:-40px auto;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    color: grey;
-}
-
-/*
-.chatimage{
-    height:150px;
-    width:350px;
-    border-radius:20px;
-}
-*/
-
-/* -------------------------MISSION-------------------*/
-.mission{
-    padding:50px 0 50px;
-    display: flex;
-    border: 1px solid transparent;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.mission h3{
-    font-size: 2em;
-    font-weight:700;
-    margin: auto;    
-}
-
-.mission p{
-    font-style: italic;
-    font-weight: 500;
-}
-
-.mission .mission-box{
-    height:400px;
-    width:70%;
-    background-color: var(--color-orange);
-    display: flex;
-    margin:40px;
-  /*  padding:20px 0 50px;  */
-    border-radius: 25px;
-}
-
-       /*  image container  */
-.mission-img{
-    border:1px solid transparent;
-    margin-top: 30px;
-}
-
-.mission-img-a{
-   display: flex;
-   justify-content:space-between;
-   align-items: center;
-}
-
-.mission-img-a img:first-child{
-    height: 120px;
-    width: 200px;
-    border-radius:10px;
-    margin:10px 0 0 -30px;
-}
-
-.mission-img-a img{
-    height: 120px;
-    width: 200px;
-    margin: 10px;
-    border-radius: 10px;
-}
-
-
-  /*  down image  */
-.mission-img-b{
-    border: 1px solid transparent;
-}
-
-.mission-img-b img{
-    height:250px;
-    width:350px;
-    margin: 10px;
-    border-radius: 25px;
-    
-}
-
-/* -------------------------MISSSION VISION-------------------*/
-.mission-vision{
-    border: 1px solid transparent;
-    margin:40px 0 0 0;
-    width: 100%;
-}
-
-.mission-vision h3{
-    color: white;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.vision-text{
-    margin:20px auto;
-    width: 60%;
-    border: 1px solid transparent;
-}
-
-.mission-vision i{
-    color:white;
-    font-weight: light;
-    line-height:30px;
-    font-size: 1.1em;
-    font-family: "DM sans",sans-serif;
-}
-
-/* -------------------------GREENY-ORDER-------------------*/
-
-.greeny-order{
-    padding: 50px 0;
-}
-
-.greeny-order h3{
-    font-size: 2em;
-    font-weight:700;
-    margin:0 auto;  
-    text-align: center;
-}
-
-.greeny-order-img{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border: 1px solid transparent;
-    margin: 50px auto;
-    width: 70%;
     padding: 20px;
+    display: flex;
+    justify-content: space-around;
 }
 
-.greeny-order-img img{
-    height:300px;
-    width:400px;
-    margin: 10px;
-    border-radius: 10px;
-}     
-
-/* -------------------------RIGHT-------------------*/
-
-main .container .right{
-    position:sticky;
-   bottom: 0;  
-   height: max-content;
-   top: var(--sticky-top-right);
+.action-button-container .button-first{
+  color: white;
+  background-color:var(--color-primary);
+  padding: 10px 30px;
+  width:200px;
+  border: 1px solid var(--color-primary);
+  font-weight: bold;
+  border-radius: 2px;
 }
+
+.action-button-container .button-second{
+    color: white;
+    background-color:var(--color-black);
+    padding: 10px 30px;
+    width:200px;
+    border: 1px solid var(--color-primary);
+    font-weight: bold;
+    border-radius: 2px;
+  }
+
+
 
 /* -------------------------FOOTER-------------------*/
 

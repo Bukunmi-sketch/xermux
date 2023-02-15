@@ -107,7 +107,7 @@ function LandingPage() {
   }, []);
 
   return (
-    <div className="land">
+    <div className="app">
     {/*  <div id="loader" style={{ display: bodyloading.display }}>
         <span class="span"></span>
         <span class="span"></span>
@@ -171,7 +171,6 @@ function LandingPage() {
                 <>
                   <LandingNav />
                   <Sectionb />
-                  <ActionButton />
                 </>
               }
             />
