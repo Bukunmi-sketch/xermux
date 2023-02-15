@@ -1,0 +1,19 @@
+:root{
+    --color-primary:rgb(17, 82, 17);
+    --color-white:white;
+    --color-danger:orangered;
+    --color-black:#000000;
+    --sticky-top-left:5.4rem;
+    --sticky-top-right:-18rem;
+    --color-green:#20B302;
+    --color-orange:#FF6600;
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+    margin:200px auto;
+}

@@ -21,9 +21,8 @@ function Signup({
 }) {
   const navigate = useNavigate();
 
-  const [inputs, setinputs] = useState({
-    payment_status: "unpaid",
-    order_status: "incomplete",
+  const [userinputs, setuserinputs] = useState({
+    account_status: "pending",
   });
   const [Errormsg, setErrormsg] = useState("");
   const [localgov, setLga] = useState([]);
@@ -241,17 +240,13 @@ function Signup({
   //handle the changes
   const handleChange = (event) => {
     const name = event.target.name;
-    const value =
-      event.target.value.charAt(0).toUpperCase() + event.target.value.slice(1);
+    const value =event.target.value.charAt(0).toUpperCase() + event.target.value.slice(1);
 
     // console.log(addedcart.toString());
-    setinputs((values) => ({
-      ...values,
-      [name]: value,
-    }));
+    setuserinputs((values) => ({...values, [name]: value,}));
 
-    // console.log(inputs);
-    if (inputs.state == "Lagos") {
+    // console.log(userinputs);
+    if (userinputs.state == "Lagos") {
       setLga([]);
       setLga([
         "",
@@ -276,7 +271,7 @@ function Signup({
         "Shomolu",
         "Surulere",
       ]);
-    } else if (inputs.state == "Oyo") {
+    } else if (userinputs.state == "Oyo") {
       setLga([]);
       setLga([
         "",
@@ -313,7 +308,7 @@ function Signup({
         "Saki West",
         "Surulere",
       ]);
-    } else if (inputs.state == "Osun") {
+    } else if (userinputs.state == "Osun") {
       setLga([]);
       setLga([
         "",
@@ -348,7 +343,7 @@ function Signup({
         "Orolu",
         "Osogbo",
       ]);
-    } else if (inputs.state == "Ondo") {
+    } else if (userinputs.state == "Ondo") {
       setLga([]);
       setLga([
         "",
@@ -373,7 +368,7 @@ function Signup({
         "Owo",
       ]);
     }
-    console.log(inputs);
+    console.log(userinputs);
     // e.g {name:"yourInputname", email: "yourinputEmail", mobile:"yourInputMobile"}
   };
 
@@ -384,17 +379,17 @@ function Signup({
 
     const name = event.target.name;
     const value = event.target.value;
-    console.log(addedcart.toString());
-    setinputs((values) => ({
+   
+    setuserinputs((values) => ({
       ...values,
       [name]: value,
     }));
-    //console.log(inputs);
+    //console.log(userinputs);
 
-    const API = "http://localhost/websites/xermux/Api/RegisterAccount.php";
+    const API = "http://localhost/websites/xermux/Api/registerMobileAccount.php";
 
     axios
-      .post(API, inputs, {
+      .post(API, userinputs, {
         headers: {
           "content-type": "application/json",
         },
@@ -405,10 +400,10 @@ function Signup({
           //    setOrders(response.data);
           console.log(response.data);
           if (response.data.status !== 500) {
-            navigate(`/page/${response.data.userid} `);
-            onClear();
-            onUnShow();
-            unLoader();
+           
+            navigate(`/home/${response.data.userid} `);
+            console.log(response.data);
+         //   onClear(); onUnShow(); unLoader();
           } else {
             setErrormsg(response.data.message);
             unLoader();
@@ -417,7 +412,7 @@ function Signup({
       })
       .catch(function (error) {
         console.log("errorrrr", error);
-        unLoader();
+        //unLoader();
       });
   };
 
@@ -428,17 +423,16 @@ function Signup({
 
     const name = event.target.name;
     const value = event.target.value;
-    console.log(addedcart.toString());
-    setinputs((values) => ({
+    setuserinputs((values) => ({
       ...values,
       [name]: value,
     }));
-    //console.log(inputs);
+    //console.log(userinputs);
 
     const API = "http://localhost/websites/xermux/Api/RegisterAccount.php";
 
     axios
-      .post(API, inputs, {
+      .post(API, userinputs, {
         headers: {
           "content-type": "application/json",
         },
@@ -473,16 +467,16 @@ function Signup({
     const name = event.target.name;
     const value = event.target.value;
     console.log(addedcart.toString());
-    setinputs((values) => ({
+    setuserinputs((values) => ({
       ...values,
       [name]: value,
     }));
-    //console.log(inputs);
+    //console.log(userinputs);
 
     const API = "http://localhost/website/xermux/Api/LoginAccount.php";
 
     axios
-      .post(API, inputs, {
+      .post(API, userinputs, {
         headers: {
           "content-type": "application/json",
         },
@@ -517,16 +511,16 @@ function Signup({
     const name = event.target.name;
     const value = event.target.value;
     console.log(addedcart.toString());
-    setinputs((values) => ({
+    setuserinputs((values) => ({
       ...values,
       [name]: value,
     }));
-    //console.log(inputs);
+    //console.log(userinputs);
 
     const API = "http://localhost/websites/xermux/Api/LoginAccount.php";
 
     axios
-      .post(API, inputs, {
+      .post(API, userinputs, {
         headers: {
           "content-type": "application/json",
         },
@@ -573,7 +567,7 @@ function Signup({
                     <input
                       type="text"
                       name="username"
-                      value={inputs.username || ""}
+                      value={userinputs.username || ""}
                       onChange={handleChange}
                       required
                     />
@@ -585,7 +579,7 @@ function Signup({
                       <input
                         type="email"
                         name="email"
-                        value={inputs.email || ""}
+                        value={userinputs.email || ""}
                         onChange={handleChange}
                         required
                       />
@@ -612,7 +606,7 @@ function Signup({
                     <input
                       type="text"
                       name="password"
-                      value={inputs.password || ""}
+                      value={userinputs.password || ""}
                       onChange={handleChange}
                       required
                     />
@@ -623,7 +617,7 @@ function Signup({
                     <input
                       type="text"
                       name="confirmpass"
-                      value={inputs.confirmpass || ""}
+                      value={userinputs.confirmpass || ""}
                       onChange={handleChange}
                     />
                   </div>
@@ -652,7 +646,7 @@ function Signup({
                     <input
                       type="text"
                       name="username"
-                      value={inputs.username || ""}
+                      value={userinputs.username || ""}
                       onChange={handleChange}
                       required
                     />
@@ -663,8 +657,8 @@ function Signup({
                       <label htmlFor="email">Mobile No :</label>
                       <input
                         type="number"
-                        name="mobile"
-                        value={inputs.mobile || ""}
+                        name="mobileno"
+                        value={userinputs.mobile || ""}
                         onChange={handleChange}
                         required
                       />
@@ -691,7 +685,7 @@ function Signup({
                     <input
                       type="text"
                       name="password"
-                      value={inputs.password || ""}
+                      value={userinputs.password || ""}
                       onChange={handleChange}
                       required
                     />
@@ -702,7 +696,7 @@ function Signup({
                     <input
                       type="text"
                       name="confirmpass"
-                      value={inputs.confirmpass || ""}
+                      value={userinputs.confirmpass || ""}
                       onChange={handleChange}
                     />
                   </div>
@@ -739,7 +733,7 @@ function Signup({
                         type="text"
                         name="uniqueid"
                         placeholder="Email"
-                        value={inputs.uniqueid || ""}
+                        value={userinputs.uniqueid || ""}
                         onChange={handleChange}
                         required
                       />
@@ -751,7 +745,7 @@ function Signup({
                         type="text"
                         placeholder="Password"
                         name="referral"
-                        value={inputs.referral || ""}
+                        value={userinputs.referral || ""}
                         onChange={handleChange}
                       />
                     </div>
@@ -776,7 +770,7 @@ function Signup({
                         type="text"
                         name="uniqueid"
                         placeholder="Mobile No"
-                        value={inputs.uniqueid || ""}
+                        value={userinputs.uniqueid || ""}
                         onChange={handleChange}
                         required
                       />
@@ -787,7 +781,7 @@ function Signup({
                       <input
                         type="text"
                         name="referral"
-                        value={inputs.referral || ""}
+                        value={userinputs.referral || ""}
                         onChange={handleChange}
                       />
                     </div>

@@ -6,7 +6,7 @@ import 'react-app-polyfill/stable';
 //import 'core-js/features/number/is-nan';
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import LandingPage from './Landing';
+import LandingPage from './App';
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

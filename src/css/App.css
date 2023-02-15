@@ -46,10 +46,10 @@ header{
     display: flex;  
     align-items: center;
     justify-content:space-between;
-    background-color:var(--color-white);
-    color:var(--color-black);
+    background-color:var(--color-black);
+    color:var(--color-white);
     position:fixed;
-    border: 1px solid white;
+    border: 1px solid transparent;
     height: 60px;
     width: 100%;
     z-index: 50;

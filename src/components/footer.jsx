@@ -1,7 +1,6 @@
 import React from 'react'
 import { FaEnvelope, FaPhone, FaMapMarkedAlt, FaMapMarked, FaTwitter, FaInstagram, FaLinkedin, FaFacebookF, FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
 import logo from '../Images/afrimamalogo.png'
-import Products from '../pages/products';
 import Teams from '../pages/teams';
 import {  Link } from 'react-router-dom';
 import { useRef } from 'react';
