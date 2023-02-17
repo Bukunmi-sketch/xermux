@@ -7,12 +7,3 @@
     --color-green:#20B302;
     --color-orange:#FF6600;
 }
-
-
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid red;
-    margin:200px auto;
-}

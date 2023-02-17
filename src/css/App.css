@@ -25,6 +25,7 @@ background-color: var(--color-black);
 border: 1px solid transparent;
 scroll-behavior: smooth;
 color:white;
+text-decoration: none;
 }
 
 .app{
@@ -167,7 +168,7 @@ header{
     height: 200px;
     width:100%;
     margin-top:60px;
-    border: 1px solid red;
+    border: 1px solid transparent;
     display: flex;
     flex-direction: column;
     height:500px;
@@ -220,7 +221,6 @@ header{
     display: flex;
     position: relative;
     border: 1px solid #cecece;
-    background-color: white;
     margin-top:50px;
     bottom: 0;
     width: 100%;
@@ -245,7 +245,7 @@ header{
 
 .footer-head{
     font-weight: bold;
-    color: green;
+    color: var(--color-primary);
 
 }
 .footer ul li{
@@ -267,7 +267,7 @@ header{
 
 li .buy-now{
     text-align: center;
-    background-color: green;
+    background-color: var(--color-primary);
     border:1px solid transparent;
     padding: 5px 30px;
     color: white;
@@ -285,7 +285,7 @@ li .buy-now{
 }
 
 .footer-icon{
-    color: green;
+    color: var(--color-primary);
     margin:10px;
 }
 

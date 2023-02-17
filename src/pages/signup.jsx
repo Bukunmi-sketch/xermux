@@ -22,352 +22,20 @@ function Signup({
   const navigate = useNavigate();
 
   const [userinputs, setuserinputs] = useState({
-    account_status: "pending",
+    account_status: "pending", verficationbadge_status: 'zero',username:"",mobileno:"",country:"",password:"",confirmpass:"",
   });
-  const [Errormsg, setErrormsg] = useState("");
+  const [Errormsg, setErrormsg] = useState('');
   const [localgov, setLga] = useState([]);
 
   const options = ["", "Oyo", "Lagos", "Osun", "Ondo"];
 
-  var countries = [
-    "Afghanistan",
-    "Albania",
-    "Algeria",
-    "Andorra",
-    "Angola",
-    "Anguilla",
-    "Antigua &amp; Barbuda",
-    "Argentina",
-    "Armenia",
-    "Aruba",
-    "Australia",
-    "Austria",
-    "Azerbaijan",
-    "Bahamas",
-    "Bahrain",
-    "Bangladesh",
-    "Barbados",
-    "Belarus",
-    "Belgium",
-    "Belize",
-    "Benin",
-    "Bermuda",
-    "Bhutan",
-    "Bolivia",
-    "Bosnia &amp; Herzegovina",
-    "Botswana",
-    "Brazil",
-    "British Virgin Islands",
-    "Brunei",
-    "Bulgaria",
-    "Burkina Faso",
-    "Burundi",
-    "Cambodia",
-    "Cameroon",
-    "Cape Verde",
-    "Cayman Islands",
-    "Chad",
-    "Chile",
-    "China",
-    "Colombia",
-    "Congo",
-    "Cook Islands",
-    "Costa Rica",
-    "Cote D Ivoire",
-    "Croatia",
-    "Cruise Ship",
-    "Cuba",
-    "Cyprus",
-    "Czech Republic",
-    "Denmark",
-    "Djibouti",
-    "Dominica",
-    "Dominican Republic",
-    "Ecuador",
-    "Egypt",
-    "El Salvador",
-    "Equatorial Guinea",
-    "Estonia",
-    "Ethiopia",
-    "Falkland Islands",
-    "Faroe Islands",
-    "Fiji",
-    "Finland",
-    "France",
-    "French Polynesia",
-    "French West Indies",
-    "Gabon",
-    "Gambia",
-    "Georgia",
-    "Germany",
-    "Ghana",
-    "Gibraltar",
-    "Greece",
-    "Greenland",
-    "Grenada",
-    "Guam",
-    "Guatemala",
-    "Guernsey",
-    "Guinea",
-    "Guinea Bissau",
-    "Guyana",
-    "Haiti",
-    "Honduras",
-    "Hong Kong",
-    "Hungary",
-    "Iceland",
-    "India",
-    "Indonesia",
-    "Iran",
-    "Iraq",
-    "Ireland",
-    "Isle of Man",
-    "Israel",
-    "Italy",
-    "Jamaica",
-    "Japan",
-    "Jersey",
-    "Jordan",
-    "Kazakhstan",
-    "Kenya",
-    "Kuwait",
-    "Kyrgyz Republic",
-    "Laos",
-    "Latvia",
-    "Lebanon",
-    "Lesotho",
-    "Liberia",
-    "Libya",
-    "Liechtenstein",
-    "Lithuania",
-    "Luxembourg",
-    "Macau",
-    "Macedonia",
-    "Madagascar",
-    "Malawi",
-    "Malaysia",
-    "Maldives",
-    "Mali",
-    "Malta",
-    "Mauritania",
-    "Mauritius",
-    "Mexico",
-    "Moldova",
-    "Monaco",
-    "Mongolia",
-    "Montenegro",
-    "Montserrat",
-    "Morocco",
-    "Mozambique",
-    "Namibia",
-    "Nepal",
-    "Netherlands",
-    "Netherlands Antilles",
-    "New Caledonia",
-    "New Zealand",
-    "Nicaragua",
-    "Niger",
-    "Nigeria",
-    "Norway",
-    "Oman",
-    "Pakistan",
-    "Palestine",
-    "Panama",
-    "Papua New Guinea",
-    "Paraguay",
-    "Peru",
-    "Philippines",
-    "Poland",
-    "Portugal",
-    "Puerto Rico",
-    "Qatar",
-    "Reunion",
-    "Romania",
-    "Russia",
-    "Rwanda",
-    "Saint Pierre &amp; Miquelon",
-    "Samoa",
-    "San Marino",
-    "Satellite",
-    "Saudi Arabia",
-    "Senegal",
-    "Serbia",
-    "Seychelles",
-    "Sierra Leone",
-    "Singapore",
-    "Slovakia",
-    "Slovenia",
-    "South Africa",
-    "South Korea",
-    "Spain",
-    "Sri Lanka",
-    "St Kitts &amp; Nevis",
-    "St Lucia",
-    "St Vincent",
-    "St. Lucia",
-    "Sudan",
-    "Suriname",
-    "Swaziland",
-    "Sweden",
-    "Switzerland",
-    "Syria",
-    "Taiwan",
-    "Tajikistan",
-    "Tanzania",
-    "Thailand",
-    "Timor L'Este",
-    "Togo",
-    "Tonga",
-    "Trinidad &amp; Tobago",
-    "Tunisia",
-    "Turkey",
-    "Turkmenistan",
-    "Turks &amp; Caicos",
-    "Uganda",
-    "Ukraine",
-    "United Arab Emirates",
-    "United Kingdom",
-    "Uruguay",
-    "Uzbekistan",
-    "Venezuela",
-    "Vietnam",
-    "Virgin Islands (US)",
-    "Yemen",
-    "Zambia",
-    "Zimbabwe",
-  ];
+  var countries = [ "","Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua &amp; Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia &amp; Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Cape Verde", "Cayman Islands", "Chad", "Chile", "China", "Colombia", "Congo", "Cook Islands", "Costa Rica", "Cote D Ivoire", "Croatia", "Cruise Ship", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji", "Finland", "France", "French Polynesia", "French West Indies", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kuwait", "Kyrgyz Republic", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Mauritania", "Mauritius", "Mexico", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Namibia", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Pierre &amp; Miquelon", "Samoa", "San Marino", "Satellite", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "South Africa", "South Korea", "Spain", "Sri Lanka", "St Kitts &amp; Nevis", "St Lucia", "St Vincent", "St. Lucia", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad &amp; Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks &amp; Caicos", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "Uruguay", "Uzbekistan", "Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe", ];
 
   //handle the changes
   const handleChange = (event) => {
     const name = event.target.name;
     const value =event.target.value.charAt(0).toUpperCase() + event.target.value.slice(1);
-
-    // console.log(addedcart.toString());
-    setuserinputs((values) => ({...values, [name]: value,}));
-
-    // console.log(userinputs);
-    if (userinputs.state == "Lagos") {
-      setLga([]);
-      setLga([
-        "",
-        "Agege",
-        "Ajeromi-Ifelodun",
-        "Alimosho",
-        "Amuwo-Odofin",
-        "Apapa",
-        "Badagry",
-        "Epe",
-        "Eti-Osa",
-        "Ibeju/Lekki",
-        "Ifako-Ijaye",
-        "Ikeja",
-        "Ikorodu",
-        "Kosofe",
-        "Lagos Island",
-        "Lagos Mainland",
-        "Mushin",
-        "Ojo",
-        "Oshodi-Isolo",
-        "Shomolu",
-        "Surulere",
-      ]);
-    } else if (userinputs.state == "Oyo") {
-      setLga([]);
-      setLga([
-        "",
-        "Afijio",
-        "Akinyele",
-        "Atiba",
-        "Atigbo",
-        "Egbeda",
-        "Ibadan Central",
-        "Ibadan North",
-        "Ibadan North West",
-        "Ibadan South East",
-        "Ibadan South West",
-        "Ibarapa Central",
-        "Ibarapa East",
-        "Ibarapa North",
-        "Ido",
-        "Irepo",
-        "Iseyin",
-        "Itesiwaju",
-        "Iwajowa",
-        "Kajola",
-        "Lagelu Ogbomosho North",
-        "Ogbomosho South",
-        "Ogo Oluwa",
-        "Olorunsogo",
-        "Oluyole",
-        "Ona-Ara",
-        "Orelope",
-        "Ori Ire",
-        "Oyo East",
-        "Oyo West",
-        "Saki East",
-        "Saki West",
-        "Surulere",
-      ]);
-    } else if (userinputs.state == "Osun") {
-      setLga([]);
-      setLga([
-        "",
-        "Aiyedade",
-        "Aiyedire",
-        "Atakumosa East",
-        "Atakumosa West",
-        "Boluwaduro",
-        "Boripe",
-        "Ede North",
-        "Ede South",
-        "Egbedore",
-        "Ejigbo",
-        "Ife Central",
-        "Ife East",
-        "Ife North",
-        "Ife South",
-        "Ifedayo",
-        "Ifelodun",
-        "Ila",
-        "Ilesha East",
-        "Ilesha West",
-        "Irepodun",
-        "Irewole",
-        "Isokan",
-        "Iwo",
-        "Obokun",
-        "Odo-Otin",
-        "Ola-Oluwa",
-        "Olorunda",
-        "Oriade",
-        "Orolu",
-        "Osogbo",
-      ]);
-    } else if (userinputs.state == "Ondo") {
-      setLga([]);
-      setLga([
-        "",
-        "Akoko North East",
-        "Akoko North West",
-        "Akoko South Akure East",
-        "Akoko South West",
-        "Akure North",
-        "Akure South",
-        "Ese-Odo",
-        "Idanre",
-        "Ifedore",
-        "Ilaje",
-        "Ile-Oluji",
-        "Okeigbo",
-        "Irele",
-        "Odigbo",
-        "Okitipupa",
-        "Ondo East",
-        "Ondo West",
-        "Ose",
-        "Owo",
-      ]);
-    }
+    setuserinputs((values) => ({...values, account_status: "pending", verficationbadge_status: 'zero', [name]: value,}))
     console.log(userinputs);
     // e.g {name:"yourInputname", email: "yourinputEmail", mobile:"yourInputMobile"}
   };
@@ -375,19 +43,14 @@ function Signup({
   //when button is submitted
   const handleMobileRegisterSubmit = (event) => {
     event.preventDefault();
-    Loader();
-
+   // Loader();
     const name = event.target.name;
     const value = event.target.value;
-   
     setuserinputs((values) => ({
-      ...values,
-      [name]: value,
+      ...values, account_status: "pending", verficationbadge_status: 'zero', [name]: value,
     }));
     //console.log(userinputs);
-
     const API = "http://localhost/websites/xermux/Api/registerMobileAccount.php";
-
     axios
       .post(API, userinputs, {
         headers: {
@@ -397,15 +60,13 @@ function Signup({
       .then(function (response) {
         console.log(response);
         if (response.status === 200) {
-          //    setOrders(response.data);
           console.log(response.data);
-          if (response.data.status !== 500) {
-           
-            navigate(`/home/${response.data.userid} `);
-            console.log(response.data);
-         //   onClear(); onUnShow(); unLoader();
+          if(response.data.status == 200){ 
+            console.log(response.data.message);
+            navigate('/verify');
           } else {
-            setErrormsg(response.data.message);
+            setErrormsg(response.data);
+            console.log("erro mess",response.data.message);
             unLoader();
           }
         }
@@ -625,7 +286,7 @@ function Signup({
                   <div className="namebox">
                     <div style={{ color: "#FF6600" }}> {Errormsg} </div>
                     <button type="submit" className="checkout-btn">
-                      Sign up{" "}
+                      Sign up with email
                     </button>
                   </div>
 
@@ -635,6 +296,9 @@ function Signup({
                   </div>
                 </form>
               ) : (
+
+
+                // REGISTER WITH MOBILE NO    REGISTER WITH MOBILE NO     REGISTER WITH MOBILE NO    REGISTER WITH MOBILE NO
                 <form onSubmit={handleMobileRegisterSubmit}>
                   <div className="mobilePhone">
                     <span onClick={onSignUpEmail}> Sign up with Email Instead</span>
@@ -643,38 +307,20 @@ function Signup({
 
                   <div className="namebox">
                     <label htmlFor="Name">Username </label>
-                    <input
-                      type="text"
-                      name="username"
-                      value={userinputs.username || ""}
-                      onChange={handleChange}
-                      required
-                    />
+                    <input type="text" name="username" value={userinputs.username || ""} onChange={handleChange} />
                   </div>
 
                   <div className="flexnameboxa">
                     <div className="namebox">
                       <label htmlFor="email">Mobile No :</label>
-                      <input
-                        type="number"
-                        name="mobileno"
-                        value={userinputs.mobile || ""}
-                        onChange={handleChange}
-                        required
-                      />
+                      <input type="number" name="mobileno" value={userinputs.mobileno || ""} onChange={handleChange} />
                     </div>
 
                     <div className="namebox">
                       <label htmlFor="address">Country</label>
-                      <select name="country" onChange={handleChange} required>
+                      <select name="country" onChange={handleChange} >
                         {countries.map((option) => (
-                          <option
-                            key={option}
-                            value={option}
-                            onChange={handleChange}
-                          >
-                            {option}
-                          </option>
+                          <option key={option} value={option} onChange={handleChange} > {option} </option>
                         ))}
                       </select>
                     </div>
@@ -682,36 +328,20 @@ function Signup({
 
                   <div className="namebox">
                     <label htmlFor="address"> Password </label>
-                    <input
-                      type="text"
-                      name="password"
-                      value={userinputs.password || ""}
-                      onChange={handleChange}
-                      required
-                    />
+                    <input type="text" name="password" value={userinputs.password || ""} onChange={handleChange} />
                   </div>
 
                   <div className="namebox">
                     <label htmlFor="address"> Confirm Password </label>
-                    <input
-                      type="text"
-                      name="confirmpass"
-                      value={userinputs.confirmpass || ""}
-                      onChange={handleChange}
-                    />
+                    <input type="text" name="confirmpass" value={userinputs.confirmpass || ""} onChange={handleChange} />
                   </div>
 
                   <div className="namebox">
                     <div style={{ color: "#FF6600" }}> {Errormsg} </div>
-                    <button type="submit" className="checkout-btn">
-                      Sign up{" "}
-                    </button>
+                    <button type="submit" className="checkout-btn"> Sign up with mobile </button>
                   </div>
 
-                  <div className="have-account">
-                    Already have an account ?{" "}
-                    <span onClick={onShowLoginPage}>Log in </span>{" "}
-                  </div>
+                  <div className="have-account"> Already have an account ? <span onClick={onShowLoginPage}>Log in </span> </div>
                 </form>
               )}
             </>
