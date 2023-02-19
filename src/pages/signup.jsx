@@ -18,6 +18,9 @@ function Signup({
   onSignUpEmail,
   signUpEmail,
   setUserToken,
+  setUserid,
+  setNameUser,
+  userid
 }) {
   const navigate = useNavigate();
 
@@ -62,8 +65,13 @@ function Signup({
         if (response.status === 200) {
           console.log(response.data);
           if(response.data.status == 200){ 
+            console.log(response.data);
             console.log(response.data.message);
-            navigate('/verify');
+            setNameUser(response.data.username);
+            setUserToken(response.data.usertoken);
+            setUserid(response.data.userid);
+            setErrormsg(userid);
+          //  navigate('/verify');
           } else {
             setErrormsg(response.data.message);
             console.log("erro mess",response.data.message);

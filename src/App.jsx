@@ -43,6 +43,8 @@ function LandingPage() {
   const [message, setMessage] = useState("");
   const [msgdisplay, setMsgdisplay] = useState({ display: "none" });
   const [userToken, setUserToken] = useState(2345);
+  const [userid, setUserid] = useState('');
+  const [nameUser, setNameUser] = useState('');
 
   const onShowAuthModal = () => {
     setauthModal({ show: true, width: "100%", transition: "0.3s" });
@@ -137,9 +139,13 @@ function LandingPage() {
                   onShowLoginPage={onShowLoginPage}
                   showRegisterPage={showRegisterPage}
                   userToken={userToken}
+                  setUserToken={setUserToken}
+                  setUserid={setUserid}
+                  setNameUser={setNameUser}
                   onSignUpEmail={onSignUpEmail}
                   onSignUpMobile={onSignUpMobile}
                   signUpEmail={signUpEmail}
+                  userid={userid}
                 />
               }
             />
