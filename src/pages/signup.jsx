@@ -65,13 +65,14 @@ function Signup({
             console.log(response.data.message);
             navigate('/verify');
           } else {
-            setErrormsg(response.data);
+            setErrormsg(response.data.message);
             console.log("erro mess",response.data.message);
             unLoader();
           }
         }
       })
       .catch(function (error) {
+        setErrormsg(response.data);
         console.log("errorrrr", error);
         //unLoader();
       });
