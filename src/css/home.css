@@ -6,4 +6,25 @@
     --sticky-top-right:-18rem;
     --color-green:#20B302;
     --color-orange:#FF6600;
+
+    --color-light:#f0eef6;
+    --color-gray:#9e98b3;
+    
+    --color-secondary:#d6ccff;
+    --color-danger:#fb5151;
+    --color-black:#000;
+    --color-success:#51fb51;
+    --color-white:#ffffff;
+
+    --border-radius:4px;
+    --card-border-radius:5px;
+    --btn-padding:10px 25px;
+    --search-padding:0.6rem 1rem;
+    --card-padding:1rem;
+
+    --sticky-top-left:5.4rem;
+    --sticky-top-right:-18rem;
+
+    --border-color:#fff;
+
 }

@@ -6,6 +6,7 @@ import Signup from './signup';
 import Homeheader from "../components/home/header";
 
 import '../css/home.css'
+import '../css/home/headermenu.css'
 
 function Home({token}) {
 
@@ -42,6 +43,7 @@ function Home({token}) {
 */
     return ( 
         <div className="container">
+          <Homeheader/>
         {/*   <Header 
           onDisplay={display} 
           cartdisplay={cartdisplay} 
