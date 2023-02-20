@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Headermenu from './headermenus';
 
 
 function Homeheader() {
@@ -8,7 +8,7 @@ function Homeheader() {
         <div class="container">
              <div class="bar" onclick="opennav()"> <i class="fa fa-navicon"></i> </div>
 
-             <h2 class="logo"> Bucuzzi </h2>
+             <h2 class="logo"> Xermux </h2>
 
              <div class="search-bar">
                  <a href="explore.php">
@@ -16,21 +16,14 @@ function Homeheader() {
                     <input type="search" name="" id="" placeholder="search for creators and people"/>
                  </a>
              </div>
-
-<!------------------------NAV MENU FOR DESKTOP  ----------------- ---------------->
-             <?php include './components/bottomnav.php'; ?>
-<!------------------------END OF MENU FOR DESKTOP ----------------- ---------------->
-
-
-
-
-
+            
+            <Headermenu/>
              
              <div class="create">
-               <!--  <label class= "btn btn-primary" for="create-post">create</label> -->
+               <label class= "btn btn-primary" for="create-post">create</label> 
                <a href="mypage.php">
                  <div class="header-profile-photo">
-                 <img src="" alt="">
+                 <img src="" alt=""/>
                  </div>
                </a>  
              </div>

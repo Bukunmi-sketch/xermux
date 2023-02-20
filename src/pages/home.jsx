@@ -3,7 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Signup from './signup';
-import Header from '../components/header';
+import Homeheader from "../components/home/header";
+
 import '../css/home.css'
 
 function Home({token}) {
