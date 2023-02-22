@@ -3,9 +3,9 @@ import { Routes, Route } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Signup from './signup';
-import Homeheader from "../components/home/header";
+import Homeheader from "../components/home/homeheader";
 
-import '../css/home.css'
+//import '../css/home.css'
 import '../css/home/headermenu.css'
 
 function Home({token}) {
