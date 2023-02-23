@@ -3,10 +3,11 @@ import { Routes, Route } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Signup from './signup';
-import Homeheader from "../components/home/homeheader";
+import Homeheader from "../components/homeheader";
+import Leftbar from "../components/leftbar";
 
-//import '../css/home.css'
-import '../css/home/headermenu.css'
+import '../css/home.css'
+
 
 function Home({token}) {
 
@@ -34,6 +35,16 @@ function Home({token}) {
     setcartshow({show:false, width:"0" });
  //   console.log(cartshow);
   }
+
+    {/*   <Header 
+          onDisplay={display} 
+          cartdisplay={cartdisplay} 
+          onShow={show} 
+          onUnDisplay={undisplay} 
+          onUnShow={unshow} 
+          />
+            Dasboard
+          
 */
 
  /*
@@ -44,15 +55,12 @@ function Home({token}) {
     return ( 
         <div className="container">
           <Homeheader/>
-        {/*   <Header 
-          onDisplay={display} 
-          cartdisplay={cartdisplay} 
-          onShow={show} 
-          onUnDisplay={undisplay} 
-          onUnShow={unshow} 
-          />
-            Dasboard
-        */}    
+          <main>
+            <Leftbar/>
+             
+
+          </main>
+      
         </div>
      );
 }
