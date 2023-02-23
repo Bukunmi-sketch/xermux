@@ -5,7 +5,7 @@ import axios from "axios";
 import Signup from './signup';
 import Homeheader from "../components/homeheader";
 import Leftbar from "../components/leftbar";
-
+import Middle from "../components/middle";
 import '../css/home.css'
 
 
@@ -57,6 +57,8 @@ function Home({token}) {
           <Homeheader/>
           <main>
             <Leftbar/>
+            <Middle/>
+            
              
 
           </main>
