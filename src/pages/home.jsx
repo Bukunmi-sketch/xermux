@@ -6,10 +6,15 @@ import Signup from './signup';
 import Homeheader from "../components/homeheader";
 import Leftbar from "../components/leftbar";
 import Middle from "../components/middle";
+import Rightbar from "../components/rightbar";
+
+//import '../css/headermenu.css'
+import '../css/leftbar.css';
 import '../css/home.css'
 
 
-function Home({token}) {
+
+function Home() {
 
     /*
   const [cartdisplay, setcartdisplay]=useState({ left:"-70%",transition: "0.3s" });
@@ -53,17 +58,17 @@ function Home({token}) {
     }
 */
     return ( 
-        <div className="container">
-          <Homeheader/>
-          <main>
-            <Leftbar/>
-            <Middle/>
-            
-             
+      <div className="home">
+        <Homeheader />
+        <main>
+          <div className="container">
+            <Leftbar />
+            <Middle />
+            <Rightbar />
+          </div>
+        </main>
 
-          </main>
-      
-        </div>
+      </div>
      );
 }
 

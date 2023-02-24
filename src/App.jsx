@@ -192,7 +192,7 @@ function LandingPage() {
           </Routes>
         </div>
 
-        <Footer />
+      
       </BrowserRouter>
     </div>
   );

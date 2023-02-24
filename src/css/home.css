@@ -58,7 +58,7 @@ body{
 
 /*GENERAL STYLES */
 .container{
-    width:80%;
+    width:90%;
     margin:0 auto;
     border: 1px solid transparent;
 }
@@ -136,7 +136,7 @@ img{
 
 nav{
     width: 100%;
-    background-color: var(--color-white);
+    background-color: var(--color-black);
     padding:0.3rem 0 ;
     position: fixed;
     top: 0;
@@ -150,6 +150,10 @@ nav .container{
     justify-content: space-between;
 }
 
+nav .container h2{
+    color: var(--color-primary);
+}
+
 .bar{
     padding:5px;
     border: 1px solid transparent;
@@ -160,11 +164,11 @@ nav .container{
 }
 
 .search-bar{
-    background-color: var(--color-light);
+    background-color: var(--color-lightblack);
     border-radius: var(--border-radius);
     padding: var(--search-padding);
     margin-left:2rem ;
-    border-radius:30px;
+    border: 1px solid var(--color-orange);
 }
 
 .search-bar a{
@@ -178,13 +182,13 @@ nav .container{
     margin-left:1rem ;
     font-size: 0.9rem;
     color: var(--color-dark);
-    font-family: "mukta",sans-serif;
+   
 }
 
 nav .search-bar input[type="search"]::placeholder{
     color: var(--color-gray);
     font-weight: bold;
-    font-family: "mukta",sans-serif;
+   
 }
 
 nav .bottom-menu-nav{
@@ -208,7 +212,7 @@ nav .bottom-menu-nav .menu-nav{
     height:45px;
    /* padding:17px 17px 17px 17px;*/
    width:70px;
-   color: var(--color-black);
+   color: var(--color-primary);
 }
 
 .bottom-menu-nav .menu-nav span{
@@ -247,7 +251,7 @@ nav .create{
 main{
     position: relative;
     top: 5.4rem;
-   
+    background-color: var(--color-lightblack);
 }
 
 
@@ -256,8 +260,8 @@ main .container{
     grid-template-columns: 20vw auto 20vw;
     column-gap: 2rem;
     position: relative;
-    border: 1px solid transparent;
-   
+    border: 1px solid red;
+    background-color: var(--color-black);
 }
 
 .middle{
@@ -533,6 +537,7 @@ main .container .right{
    bottom: 0;  
    height: max-content;
    top: var(--sticky-top-right);
+   border:1px solid red;
 }
 
 .right .messages{

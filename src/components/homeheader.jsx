@@ -1,19 +1,28 @@
 import React, { useState } from "react";
-import '../css/headermenu.css'
+import { FaBell, FaEnvelope, FaHome, FaPeopleCarry, FaSearch } from "react-icons/fa";
+//import '../css/headermenu.css'
 
 function Homeheader() {
+  
+  const fontColor={
+    color:'#FF6600'
+    
+ }
+
+
+
   return (
     <nav>
       <div class="container">
         <div class="bar" onclick="opennav()">
-          {" "}
-          <i class="fa fa-navicon"></i>{" "}
+          
+          <i class="fa fa-navicon"></i>
         </div>
 
         <h2 class="logo"> Xermux </h2>
 
         <div class="search-bar">
-          <a href="explore.php">
+          <a href="#">
             <i class="fa fa-search"></i>
             <input
               type="search"
@@ -26,31 +35,31 @@ function Homeheader() {
 
         {/* HEADER MENU FOR DESKTOP */}
         <div class="bottom-menu-nav">
-          <a href="home.php" class="menu-nav" id="message-notifications">
-            <span style={{ color: "black" }}> <i class="material-icons">home</i> </span>
+          <a href="home.php" class="menu-nav" id="message-notifications" >
+            <span > <FaHome/> </span>
             <h3>Home</h3>
           </a>
-          <a href="explore.php" class="menu-nav">
+          <a href="explore.php" class="menu-nav" >
             <span>
-              <i class="material-icons">search</i>
+              <FaSearch/>
             </span>
             <h3>Search</h3>
           </a>
-          <a href="connect.php" class="menu-nav">
+          <a href="connect.php" class="menu-nav" >
             <span>
-              <i class="material-icons">people</i>
+              <FaPeopleCarry/>
             </span>
             <h3>Connect</h3>
           </a>
 
-          <a href="notify.php?read=true" class="menu-nav">
-            <span> <i class="material-icons">notifications_active</i> </span>
+          <a href="notify.php?read=true" class="menu-nav" >
+            <span> <FaBell/> </span>
             <h3>Notifications</h3>
           </a>
 
-          <a href="inbox.php?read=true" class="menu-nav">
+          <a href="inbox.php?read=true" class="menu-nav" >
             <span>
-              <i class="material-icons"> email </i>{" "}
+              <FaEnvelope/>
             </span>
             <h3>Messages</h3>
           </a>
