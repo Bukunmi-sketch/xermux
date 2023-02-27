@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkedAlt, FaMapMarked, FaTwitter, FaInstagram, FaLinkedin, FaFacebookF, FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaMapMarkedAlt, FaMapMarked, FaTwitter, FaInstagram, FaLinkedin, FaFacebookF, FaWhatsapp, FaWhatsappSquare, FaHome } from "react-icons/fa";
 
 
 function Leftbar() {
@@ -37,7 +37,7 @@ function Leftbar() {
 
 
                 <a href="home.php" className="menu-item active">
-                    <span><FaEnvelope/></span>
+                    <span> <FaHome/> </span>
                     <h3>Home</h3>
                 </a>
                 <a href="explore.php" className="menu-item">
