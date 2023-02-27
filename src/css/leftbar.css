@@ -12,7 +12,7 @@ main .container .left{
 
 main .container .left .image-removebox{
   display:flex;
-  border:1px solid transparent;
+  border:1px solid green;
   
   justify-content:space-between;
 }
@@ -34,14 +34,12 @@ main .container .left .profile{
     align-items: center;
     column-gap: 1rem;
     width:70%;
-    border: 1px solid var(--border-color);
+    border: 1px solid transparent;
 }
 
 /* ------------------SIDEBAR--------------------------*/
 .left .sidebar{
-    
     border-radius: var(--card-border-radius);
-    border: 1px solid var(--border-color);
 }
 
 .left .sidebar .menu-item{
