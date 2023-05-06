@@ -8,6 +8,7 @@ import "./css/App.css";
 import "./css/headernav.css"
 import Signup from "./pages/signup";
 import Login from "./pages/login";
+import Profile from "./pages/profile";
 import LandingNav from "./components/landingnav";
 import Sectionb from "./components/sectionb";
 import ActionButton from "./components/button";
@@ -186,6 +187,15 @@ function LandingPage() {
               element={
                 <>
                  <Home/>
+                </>
+              }
+            />
+
+            <Route
+              path="/profile"
+              element={
+                <>
+                 <Profile/>
                 </>
               }
             />
