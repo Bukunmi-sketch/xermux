@@ -26,6 +26,11 @@ border: 1px solid transparent;
 scroll-behavior: smooth;
 color:white;
 text-decoration: none;
+font-family: "DM sans",sans-serif;
+}
+
+button,link,a{
+    font-family: "DM sans",sans-serif;
 }
 
 .app{

@@ -49,13 +49,16 @@
 }
 
 body{
-   font-family: "mukta", sans-serif;
+    font-family: "DM sans",sans-serif;
    color: var(--color-dark);
    overflow-x: hidden;
    text-decoration: none;
 }
 
 /*GENERAL STYLES */
+html,button,a{
+    font-family: "DM sans",sans-serif;
+}
 .container{
     width:90%;
     margin:0 auto;

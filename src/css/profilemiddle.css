@@ -1,0 +1,281 @@
+/* -------------------------MIDDLE PROFILES-------------------*/
+html{
+    font-family: "DM sans",sans-serif;
+}
+
+.middle{
+    border: 1px solid yellow;
+    width:100%;
+}
+ .middle .profile-section{
+   border:1px solid transparent;
+   padding:0 0;
+   width:100%; 
+}
+
+.cover-photos{
+   width:100%;
+   position: relative;
+   display: flex;
+   border: 1px solid transparent;
+   height:150px;
+   top: 0;
+   align-items: center;
+   justify-content: space-around;
+
+}
+
+.cover-photos img{
+    height:150px;
+ }
+
+.profile-image-container{
+    display: flex;
+    flex-direction:column;
+    border:1px solid transparent;
+    justify-content: space-around;
+    padding:0;
+   
+}
+
+.profile-image-box{
+    border: 1px solid transparent;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 0 0 20px;
+    z-index:100;
+}
+
+.profile-image-box .profile-image{
+    border: 6px solid white;
+    border-radius: 50%;
+    margin: -90px 0 0 0;
+}
+
+.profile-image img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.last-seen{
+    font-size:0.67em;
+    color:grey;
+    margin:2px;
+}
+
+.profile-image-box .name-box{
+   margin:0 0 0 10px ;
+   border: 2px solid transparent;
+   width:70%;
+   justify-content:center;
+   align-items:center;
+   display:flex;
+   flex-direction:column;
+}
+
+.name-box .fullname{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.name-box .username{
+    font-weight: bold;
+    font-size: 1em;
+    color: grey;
+  }
+
+.name-box .interestt{
+  font-weight: bold;
+  font-size:0.8em;
+}  
+
+.about-bio{
+    width:100%;
+    border: 1px solid transparent;
+    padding: 10px 10px;
+    font-size: 0.8em;
+}
+
+.profile-section .btn-box{
+    display:none;
+    width: 90%;
+    border: 1px solid ;
+    height: 50px;
+    margin: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.users-action{
+display:flex;
+   align-items: center;
+    justify-content: space-around;
+}
+
+.edit-bio{
+    color:var(--color-black);
+    font-size:0.9em;
+    margin:1px;
+    text-align:center;
+    text-decoration: none;
+    background-color:var(--color-primary);
+    padding: 7.9px 40px;
+    border-radius:4px;
+    border:1px solid transparent;
+    align-items: center;
+    font-weight:bold;
+
+    }
+
+.follow{
+    color:var(--color-white);
+    font-size:0.9em;
+    margin:1px;
+    text-align:center;
+    text-decoration: none;
+    background-color:var(--color-black);
+    padding: 7.9px 40px;
+    border-radius:4px;
+    border:1px solid transparent;
+    align-items: center;
+    font-weight:bold;
+
+
+    }
+
+.unfollow{
+    color:var(--color-black);
+    font-size:0.9em;
+    margin:1px;
+    text-align:center;
+    text-decoration: none;
+    background-color:var(--color-light);
+    padding: 7.9px 40px;
+    border-radius:4px;
+    border:1px solid transparent;
+    align-items: center;
+    font-weight:bold;
+
+
+    }    
+
+.msg-link{
+    color:var(--color-white);
+    font-size:0.9em;
+    margin:1px;
+    text-align:center;
+    text-decoration: none;
+    background-color:var(--color-black);
+    padding: 7.9px 40px;
+    border-radius:4px;
+    border:1px solid transparent;
+    align-items: center;
+    font-weight:bold;
+
+    }
+.numbers{
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    border:1px solid transparent;
+    position:relative;
+    }
+    
+    
+.item{
+    flex:1;
+    color:grey;
+    padding:5px;
+    }
+.item a{
+    color:grey;
+    font-size: 0.8em;
+    text-decoration:none;
+    }
+ .item span{
+    display:inline-block;
+    font-size:1em;
+    font-weight:bold;
+    color:black;
+ }
+
+ .info{
+    font-weight:bold;
+   
+    color:black;
+    width:100%;
+    border:1px solid white;
+    }
+    
+    
+    
+    .locate{
+    font-size:0.8em;
+    font-weight:bold;
+    color:black;
+    padding:5px;   
+    border:1px solid transparent;
+    }
+   
+    .locate i{
+    color:black;
+    background-color:#f8f8f8;
+    border-radius:50%;
+    padding:5px;
+    text-align:center;
+    
+    }
+    */
+    .locate a{
+    text-decoration:none;
+    color:blue; 
+    }
+
+.scroll{
+    margin-top:10px;
+    display:flex;
+   justify-content:space-between;
+   align-items:center;
+   width:100%;
+   border:1px solid transparent;
+}
+
+.scroll button{
+   padding:7px 15px;
+   background:white;
+   font-size:0.8em;
+   border-radius:5px;
+   background-color: var(--color-light);
+   font-family:"mukta",sans-serif;
+}
+
+    
+    
+        
+@media screen and (max-width:500px) {
+
+.profile-image-box{
+    margin:0 0 0 0;
+   
+}
+.profile-image-box .name-box{
+   margin:0 0 0 0 ;
+   width:100%;
+   align-items:center;
+   
+}
+
+   .profile-image img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+   .name-box .fullname{
+    font-weight: bold;
+   font-size: 1.1em;
+   }
+
+}

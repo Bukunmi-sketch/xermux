@@ -5,7 +5,7 @@ import axios from "axios";
 import Signup from './signup';
 import Profileheader from "../components/profileheader";
 import Leftbar from "../components/leftbar";
-import Middle from "../components/middle";
+import ProfileMiddle from "../components/profilemiddle";
 import Rightbar from "../components/rightbar";
 
 //import '../css/headermenu.css'
@@ -23,7 +23,7 @@ function Profile() {
         <main>
           <div className="container">
             <Leftbar />
-            <Middle />
+            <ProfileMiddle />
             <Rightbar />
           </div>
         </main>
